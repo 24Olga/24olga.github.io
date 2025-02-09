@@ -100,3 +100,8 @@ a{
 .toggle-content.expanded {
   height: auto;
 }
+
+.important {
+  color: red;
+  font-weight: bold;
+}
