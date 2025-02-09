@@ -104,6 +104,7 @@ a{
 .important {
   color: red;
   font-weight: bold;
-  position: relative;
-  top: 90%;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
 }
