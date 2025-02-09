@@ -1,0 +1,102 @@
+body, html {
+  display: inline-flex;
+  height: auto;
+  margin: 0;
+  justify-content: center;
+  background:url("img.bmp") no-repeat center center; 
+  background-size:cover;
+  background-attachment: fixed;
+  background-color:#CCCCCC;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 2fr;
+}
+
+a{
+  color: black;
+}
+     
+.container {
+  position: relative;
+  width: 100%;
+  padding: 35px;
+  background-color: rgba(255,255,255,0.5);
+  border: 2px solid black;
+  text-align: center;
+  border-radius: 10px;
+  top: 100px;
+}
+
+.button {
+  position: relative;
+  padding: 7px 10px;  
+  right: 80px;
+  font-size: 16px;  
+  color: white;  
+  background-color: #3E8E41;  
+  text-decoration: none;
+  border: 2px solid darkgreen;  
+  border-radius: 5px;  
+  cursor: pointer;
+  transition: background-color 0.4s;
+  position: relative;
+}  
+
+.button:hover {  
+  background-color: #4CAF50;
+}
+
+#currentTime{
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  color: #FFFFFF;
+  font-family: Arial, Sans-Serif;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.white-box {
+  position: relative;
+  left: 35px;
+  border: 1px solid gray;  
+  padding: 8px;  
+  background-color: rgba(255,255,255,0.5); 
+  width: 400px;
+  border-radius: 5px;
+  margin: 10px;
+}  
+
+.box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}  
+
+.text {
+  text-align: left;
+}
+
+.right-controls {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-icon {  
+  cursor: pointer;  
+  font-size: 18px;  
+  transition: transform 0.3s;
+}
+
+.toggle-content {
+  height: 0;
+  overflow: hidden;  
+  transition: height 0.5s ease-out, padding 0.5s ease-out;
+}  
+
+.toggle-content.expanded {
+  height: auto;
+}
