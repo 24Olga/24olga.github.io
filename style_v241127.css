@@ -108,3 +108,20 @@ a{
   bottom: 0px;
   font-size: 31px;
 }
+
+.unavailable_button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #727272;
+  text-decoration: none;
+  border: 2px solid #595959;
+  border-radius: 5px;
+  transition: background-color 0.4s;
+}
+
+.unavailable_button:hover {
+  background-color: #909090;
+  cursor: not-allowed;
+}
