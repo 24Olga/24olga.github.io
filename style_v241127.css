@@ -17,10 +17,6 @@ main {
 a{
   color: black;
 }
-
-a.important{
-  color: red;
-}
      
 .container {
   position: relative;
@@ -111,6 +107,10 @@ a.important{
   position: absolute;
   bottom: 0px;
   font-size: 31px;
+}
+
+.important a{
+  color: red;
 }
 
 .unavailable_button {
