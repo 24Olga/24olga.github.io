@@ -1,107 +1,193 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width initial-scale=1">
-		<title>JimmyTao10525的个人网站</title>
-		<link rel="icon" href="H8_FRGB_TRY.png" type="image/png" sizes="32x32">
-		<link href="style_v241127.css" rel="stylesheet" type="text/css">
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JimmyTao10525的个人网站</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: '微软雅黑', sans-serif;
+        }
 
-	<body>
-	    <div id='currentTime'>正在加载时间……</div>
-	    <main>
-	    	<div></div>
-			<div class='container'>
-				<h1><strong>JimmyTao10525的个人网站</strong><br></h1>
-				<div class='white-box'>
-				    <div class='box-header'>
-				        <span class='left-text'><b>所有云图文件</b></span>
-				        <div class='right-controls'>
-	    			        <a class='unavailable_button' target='_self' title='查看云图文件'><b>点击查看</b></a>
-	    			        <span class='toggle-icon'>展开 v</span>
-				        </div>
-				    </div>
-				    <div class='toggle-content' id='toggleContent'>
-				        <p>这里是存储所有卫星云图文件的地方。这里有很多不同的卫星种类，包括MODIS-Aqua/Terra, VIIRS, AVHRR, Himawari-8/9, GOES-16/17/18, Sentinel-3A/B SLSTR, MSG-2, MTG-I1, GCOM-C-SGLI等等。</p>
-				        <p>进入目录时请先选择您想要看的卫星名称（若不认识欢迎百度），随后选择台风/气旋名称，不同文件的时间（如有），即可查看图片。</p>
-				        <p>若选择HIMAWARI-9文件夹，进入页面后您会发现有三个不同的文件夹：这是因为向日葵9号卫星分了三种不同的观测模式。第一种，也是最容易理解的，是FLDK。FLDK是因为Full-Disk，全圆盘的简称。这个文件夹里主要放置绘制的经过投影和区域选择以及未经投影的全圆盘云图。TARGET-AREA，中文机动观测，是该卫星比较独特的一种观测模式。有台风活跃时，这个机动观测区域会精确对准台风中心并且跟随台风中心移动。很可惜的是，这颗卫星只有一个机动观测区域，也就是说如果西北太平洋有多个台风活跃的话只有一个台风有机动观测，其余的台风只能看全圆盘。例如在2023年超强台风苏拉活跃期间，机动观测一大部分时间都对准边上的强台风海葵，导致苏拉在一段时间里没有机动观测。最后一种JAPAN-AREA也是一种观测模式，对准的是日本的岛屿，但是正常情况下很少使用这种模式。</p>
-				        <p>若选择GOES文件夹，请先确保看完上方HIMAWARI文件夹段落，以便于理解；请点击后选择自己想要查看的是GOES-16,17,还是18。GOES-16，也称之为GOES-East，负责美国区以及大部分大西洋的图像服务。GOES-17/18，也称之为GOES-West，负责没过去以及东太平洋的图像服务。GOES数据有三种不同的区域范围，分别为Conus（美国本土，除阿拉斯加和夏威夷之外），FLDK（Full Disk，全圆盘），和MESOSCALE（类似于Himawari的机动观测，只不过GOES的每颗卫星有两个不同的区域，若有飓风或者特殊天气MESOSCALE会对准他们，每半分钟出一次图像），因此需要在选择好卫星后选择想要的区域范围，随后再选择飓风/气旋名称，即可来到全部都是图片的界面。</p>
-				        <p>在未来此处将会存放更多其他卫星的云图文件，例如Geo-Kompsat-2A, GMS-5, MTSAT-1R, MTSAT-2等等。</p>
-				    </div>
-				</div>
-			
-				<div class='white-box'>
-				    <div class='box-header'>
-				        <span class='left-text'><b>其他气象文件</b></span>
-				        <div class='right-controls'>
-	    			        <a href='menu' class='button' target='_self' title='查看其他文件'><b>点击查看</b></a>
-	    			        <span class='toggle-icon'>展开 v</span>
-				        </div>
-				    </div>
-				    <div class='toggle-content'>
-				        <p>这里存储了除了卫星云图外其他的气象数据。</p>
-				        <p>点击进入后，目前只有上海天气存档这一个选项，再点击一下，就可以进入到月份导览页面。</p>
-				        <p>该导览页面<b>强烈建议使用平板电脑或者电脑查看！</b></p>
-				        <p>在月份导览页面选择您想要的年份及月份后直接跳转到数据本身。</p>
-				    </div>
-				</div>
-				
-				<div class='white-box'>
-				    <div class='box-header'>
-				        <span class='left-text'><b>查看文件更新</b></span>
-				        <div class='right-controls'>
-	    			        <a href='updates' class='button' target='_self' title='查看文件更新情况'><b>点击查看</b></a>
-	    			        <span class='toggle-icon'>展开 v</span>
-				        </div>
-				    </div>
-				    <div class='toggle-content'>
-				        <p>这里存储着十五天内在上方两个文件夹内上新的文件内容。里面包含上新的文件名称/内容，一个可以直接点击的链接，还有该文件更新的时间。</p>
-				    </div>
-				</div>
-				
-				<div class='white-box'>
-				    <div class='box-header'>
-				        <span class='left-text'><b>友情链接</b></span>
-				        <div class='right-controls'>
-	    			        <a href='friend_link' class='button' target='_self' title='查看友情链接'><b>点击查看</b></a>
-	    			        <span class='toggle-icon'>展开 v</span>
-				        </div>
-				    </div>
-				    <div class='toggle-content'>
-				        <p>这里存储着三个类似与本网站的网页。下面两个网站需要注册账号才能查看。</p>
-				        <p><i>通知：第一个网站因为服务器问题已被关停，故无法点击。(2024/9/28)</i></p>
-				    </div>
-				</div>
-				
-				<div class='white-box'>
-				    <div class='box-header'>
-				        <span class='left-text'><b>本站历史</b></span>
-				        <div class='right-controls'>
-	    			        <a href='history' class='button' target='_self' title='查看网站最新更新及消息'><b>点击查看</b></a>
-	    			        <span class='toggle-icon'>展开 v</span>
-				        </div>
-				    </div>
-				    <div class='toggle-content'>
-				        <p>这里存储着本网站建站以来非文件的更新变化，例如版式、元素变化等</p>
-				    </div>
-				</div>
-			    
-				<div class='white-box'>
-				    <div class='box-header'>
-				        <span class='left-text'><b>English</b></span>
-				        <div class='right-controls'>
-	    			        <a href='en' class='button' target='_self' title='查看网站最新更新及消息'><b>Click Here</b></a>
-	    			        <span class='toggle-icon'>展开 v</span>
-				        </div>
-				    </div>
-				    <div class='toggle-content'>
-				        <p>Click the button above for the English version of the website.</p>
-				    </div>
-				</div>
-			</div>
-		</main>
-	<p class="important">本站还在试运营状态，需要访问全部文件请点击<a href="http://8.153.36.100/" target="_blank" title="查看全部文件" class="important">此链接</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;，谢谢配合！</p>
-        <script src="script_v241006.js"></script>
-	</body>
+        body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+        }
+
+        /* 修改后的导航栏样式 */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: rgba(255, 255, 255, 0.85); /* 增加透明度 */
+            backdrop-filter: blur(5px); /* 添加毛玻璃效果 */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        /* logo图片样式 */
+        .logo img {
+            height: 40px; /* 固定高度 */
+            max-width: 180px; /* 最大宽度限制 */
+            transition: transform 0.3s;
+        }
+
+        .logo:hover img {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links li {
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #3498db;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::before {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        /* 内容区域 */
+        .content {
+            padding: 100px 20%;
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            animation: fadeIn 1.5s ease;
+        }
+
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 10px 20px;
+                flex-direction: column;
+            }
+
+            .logo img {
+                height: 35px; /* 移动端调整高度 */
+            }
+
+            .nav-links {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .content {
+                padding: 50px 10%;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <!-- 请将logo.png替换为你的实际图片路径 -->
+            <img src="logo.png" alt="网站Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="data" target="_self">云图文件</a></li>
+            <li><a href="menu" target="_self">其他文件</a></li>
+            <li><a href="updates" target="_self">文件更新</a></li>
+            <li><a href="friend_link" target="_self">友情链接</a></li>
+            <li><a href="history" target="_self">本站历史</a></li>
+            <li><a href="en" target="_self">English</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>JimmyTao10525的个人网站</h1>
+        <p>一些介绍</p>
+    </div>
+
+    <script>
+        // 修改后的滚动样式
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255,255,255,0.95)';
+                navbar.style.boxShadow = '0 2px 15px rgba(0,0,0,0.1)';
+            } else {
+                navbar.style.background = 'rgba(255,255,255,0.85)';
+                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // 点击动画保持原样
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.style.animation = 'clickEffect 0.3s';
+                setTimeout(() => {
+                    window.location.href = this.href;
+                }, 300);
+            });
+        });
+    </script>
+</body>
 </html>
