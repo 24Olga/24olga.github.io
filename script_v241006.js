@@ -12,25 +12,23 @@ function updateTime() {
 updateTime();    
 setInterval(updateTime, 1000); 
 
-document.addEventListener('DOMContentLoaded', () => {  
- const toggleIcons = document.querySelectorAll('.toggle-icon'); // 选择所有具有toggle-icon类的元素  
- const toggleContents = document.querySelectorAll('.toggle-content'); // 假设每个.toggle-icon对应一个.toggle-content  
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(255,255,255,0.95)';
+        navbar.style.boxShadow = '0 2px 15px rgba(0,0,0,0.1)';
+    } else {
+        navbar.style.background = 'rgba(255,255,255,0.85)';
+        navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+    }
+});
 
-toggleIcons.forEach((toggleIcon, index) => { // 对每个.toggle-icon元素执行以下操作  
-     const toggleContent = toggleContents[index]; // 获取对应的.toggle-content元素（这里假设它们是按顺序对应的）  
-     let isExpanded = false;  
-
-     const toggleContentDisplay = () => {  
-         if (isExpanded) {  
-             toggleContent.classList.remove('expanded');  
-             toggleIcon.textContent = '展开 v';  
-         } else {  
-             toggleContent.classList.add('expanded');  
-             toggleIcon.textContent = '收起 ʌ';  
-         }  
-         isExpanded = !isExpanded;  
-     };  
-
-     toggleIcon.addEventListener('click', toggleContentDisplay);  
- });  
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.style.animation = 'clickEffect 0.3s';
+        setTimeout(() => {
+            window.location.href = this.href;
+        }, 300);
+    });
 });
