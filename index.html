@@ -4,150 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JimmyTao10525的个人网站</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: '微软雅黑', sans-serif;
-        }
-
-        body {
-            background: url('background.png') no-repeat center center fixed;
-            background-size: cover;
-            min-height: 100vh;
-        }
-
-        /* 修改后的导航栏样式 */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 50px;
-            background-color: rgba(255, 255, 255, 0.85); /* 增加透明度 */
-            backdrop-filter: blur(5px); /* 添加毛玻璃效果 */
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: relative;
-        }
-
-        /* logo图片样式 */
-        .logo img {
-            height: 40px; /* 固定高度 */
-            max-width: 180px; /* 最大宽度限制 */
-            transition: transform 0.3s;
-        }
-
-        .logo:hover img {
-            transform: scale(1.05);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links li {
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: 500;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: all 0.3s;
-            position: relative;
-        }
-
-        .nav-links a::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: #3498db;
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover::before {
-            width: 100%;
-        }
-
-        .nav-links a:hover {
-            color: #3498db;
-        }
-
-        /* 内容区域 */
-        .content {
-            padding: 100px 20%;
-            color: white;
-            text-align: center;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        h1 {
-            font-size: 3.5em;
-            margin-bottom: 30px;
-            animation: fadeInUp 1s ease;
-        }
-
-        p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            animation: fadeIn 1.5s ease;
-        }
-
-        /* 动画效果 */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .navbar {
-                padding: 10px 20px;
-                flex-direction: column;
-            }
-
-            .logo img {
-                height: 35px; /* 移动端调整高度 */
-            }
-
-            .nav-links {
-                margin-top: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
-            }
-
-            .content {
-                padding: 50px 10%;
-            }
-
-            h1 {
-                font-size: 2.5em;
-            }
-        }
-    </style>
+    <link href="style_v241127.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <nav class="navbar">
         <a href="#" class="logo">
-            <!-- 请将logo.png替换为你的实际图片路径 -->
             <img src="logo.png" alt="网站Logo">
         </a>
         <ul class="nav-links">
@@ -164,30 +25,6 @@
         <h1>JimmyTao10525的个人网站</h1>
         <p>一些介绍</p>
     </div>
-
-    <script>
-        // 修改后的滚动样式
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(255,255,255,0.95)';
-                navbar.style.boxShadow = '0 2px 15px rgba(0,0,0,0.1)';
-            } else {
-                navbar.style.background = 'rgba(255,255,255,0.85)';
-                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-            }
-        });
-
-        // 点击动画保持原样
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                this.style.animation = 'clickEffect 0.3s';
-                setTimeout(() => {
-                    window.location.href = this.href;
-                }, 300);
-            });
-        });
-    </script>
+    <script src="script_v241006.js"></script>
 </body>
 </html>
