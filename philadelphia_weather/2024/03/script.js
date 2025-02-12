@@ -53,3 +53,12 @@ window.addEventListener('scroll', () => {
         ? 'rgba(255,255,255,0.95)' 
         : 'rgba(255,255,255,0.85)';
 });
+
+// 添加按钮点击动画
+document.querySelector('.back-button').addEventListener('click', function(e) {
+    e.preventDefault();
+    this.style.transform = 'translateX(-10px)';
+    setTimeout(() => {
+        window.history.back();
+    }, 300);
+});
