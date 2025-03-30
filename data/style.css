@@ -256,3 +256,41 @@ p {
     transition: all 0.3s ease;
     z-index: 100;
 }
+
+.back-button::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid #3498db;
+    border-bottom: 2px solid #3498db;
+    transform: rotate(45deg);
+    margin-right: 8px;
+    transition: all 0.3s;
+}
+
+.back-button:hover {
+    transform: translateX(-5px);
+    background: rgba(255,255,255,1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.back-button:hover::before {
+    border-color: #2980b9;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .back-button {
+        left: 20px;
+        top: 70px;
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    
+    .back-button::before {
+        width: 10px;
+        height: 10px;
+        margin-right: 6px;
+    }
+}
