@@ -9,7 +9,7 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="#" class="logo">
+        <a href="../" class="logo">
             <img src="../logo.png" alt="网站Logo">
         </a>
         <ul class="nav-links">
@@ -31,23 +31,6 @@
         	<h3><a href='http://106.13.174.79/' title='卫星云图在线绘制' target='_blank' class='friend-link'>卫星云图在线绘制 (tyfyvw)</a></h3>
 	</div>
     </div>
-
-    <script>
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            navbar.style.background = window.scrollY > 50 
-                ? 'rgba(255,255,255,0.95)' 
-                : 'rgba(255,255,255,0.85)';
-        });
-
-        document.querySelectorAll('.friend-link').forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                this.style.transform = 'scale(0.95)';
-                setTimeout(() => {
-                    this.style.transform = '';
-                }, 200);
-            });
-        });
-    </script>
+    <script src="script_v250807.js"></script>
 </body>
 </html>
