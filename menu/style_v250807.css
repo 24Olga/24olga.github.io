@@ -176,6 +176,7 @@ h1 {
   box-shadow: 0 4px 15px rgba(52,152,219,0.3);
   border: 1px solid #2980b9;
   font-size: 1.1em;
+  font-weight: bold;
 }
 
 .file-btn:hover {
