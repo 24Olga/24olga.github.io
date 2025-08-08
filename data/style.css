@@ -11,16 +11,24 @@ body {
     min-height: 100vh;
 }
 
-.content {
-    padding: 100px 10%;
-    color: #2c3e50;
-}
-
 h1 {
     text-align: center;
     color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    font-size: 3.5em;
+    animation: fadeInUp 1s ease;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease;
+}
+
+.content {
+    padding: 100px 10%;
+    color: #2c3e50;
 }
 
 .content-block {
@@ -92,33 +100,6 @@ h1 {
     background: #2980b9;
 }
 
-@media (max-width: 768px) {
-    .content-block {
-        width: 95%;
-    }
-
-    .content-header {
-        padding: 15px 20px;
-    }
-
-    .content-body p {
-        font-size: 0.95em;
-    }
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: '微软雅黑', sans-serif;
-}
-
-body {
-    background: url('../background.png') no-repeat center center fixed;
-    background-size: cover;
-    min-height: 100vh;
-}
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -185,16 +166,122 @@ body {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-h1 {
-    font-size: 3.5em;
-    margin-bottom: 30px;
-    animation: fadeInUp 1s ease;
+.back-button {
+    position: absolute;
+    left: 50px;
+    top: 90px;
+    display: flex;
+    align-items: center;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    z-index: 100;
 }
 
-p {
-    font-size: 1.2em;
+.back-button::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid #3498db;
+    border-bottom: 2px solid #3498db;
+    transform: rotate(45deg);
+    margin-right: 8px;
+    transition: all 0.3s;
+}
+
+.back-button:hover {
+    transform: translateX(-5px);
+    background: rgba(255,255,255,1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.back-button:hover::before {
+    border-color: #2980b9;
+}
+
+.welcome-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.welcome-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.welcome-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.welcome-modal.active .welcome-content {
+    transform: translateY(0);
+}
+
+.welcome-content h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.welcome-content p {
+    color: #666;
     line-height: 1.6;
-    animation: fadeIn 1.5s ease;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #3498db;
+}
+
+.confirm-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.confirm-btn:hover {
+    background: #2980b9;
 }
 
 @keyframes fadeIn {
@@ -239,47 +326,6 @@ p {
     }
 }
 
-.back-button {
-    position: absolute;
-    left: 50px;
-    top: 80px;
-    display: flex;
-    align-items: center;
-    color: #3498db;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 8px 15px;
-    border-radius: 20px;
-    background: rgba(255,255,255,0.9);
-    backdrop-filter: blur(2px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    z-index: 100;
-}
-
-.back-button::before {
-    content: '';
-    display: block;
-    width: 12px;
-    height: 12px;
-    border-left: 2px solid #3498db;
-    border-bottom: 2px solid #3498db;
-    transform: rotate(45deg);
-    margin-right: 8px;
-    transition: all 0.3s;
-}
-
-.back-button:hover {
-    transform: translateX(-5px);
-    background: rgba(255,255,255,1);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.back-button:hover::before {
-    border-color: #2980b9;
-}
-
-/* 移动端适配 */
 @media (max-width: 768px) {
     .back-button {
         left: 20px;
@@ -292,5 +338,20 @@ p {
         width: 10px;
         height: 10px;
         margin-right: 6px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .content-block {
+        width: 95%;
+    }
+
+    .content-header {
+        padding: 15px 20px;
+    }
+
+    .content-body p {
+        font-size: 0.95em;
     }
 }
