@@ -6,21 +6,29 @@
 }
 
 body {
-    background: url('../../background.png') no-repeat center center fixed;
+    background: url('../../../background.png') no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
-}
-
-.content {
-    padding: 100px 10%;
-    color: #2c3e50;
 }
 
 h1 {
     text-align: center;
     color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    margin-bottom: 50px;
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease;
+}
+
+.content {
+    padding: 100px 10%;
+    color: #2c3e50;
 }
 
 .content-block {
@@ -92,27 +100,6 @@ h1 {
     background-color: #2980b9;
 }
 
-@media (max-width: 768px) {
-    .content-block {
-        width: 95%;
-    }
-
-    .content-header {
-        padding: 15px 20px;
-    }
-
-    .content-body p {
-        font-size: 0.95em;
-    }
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: '微软雅黑', sans-serif;
-}
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -179,64 +166,10 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-h1 {
-    font-size: 3.5em;
-    margin-bottom: 30px;
-    animation: fadeInUp 1s ease;
-}
-
-p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    animation: fadeIn 1.5s ease;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        padding: 10px 20px;
-        flex-direction: column;
-    }
-
-    .logo img {
-        height: 35px;
-    }
-
-    .nav-links {
-        margin-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .content {
-        padding: 50px 10%;
-    }
-
-    h1 {
-        font-size: 2.5em;
-    }
-}
-
 .back-button {
     position: absolute;
     left: 50px;
-    top: 80px;
+    top: 90px;
     display: flex;
     align-items: center;
     color: #3498db;
@@ -273,7 +206,36 @@ p {
     border-color: #2980b9;
 }
 
-/* 移动端适配 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .content-block {
+        width: 95%;
+    }
+
+    .content-header {
+        padding: 15px 20px;
+    }
+
+    .content-body p {
+        font-size: 0.95em;
+    }
+}
+
 @media (max-width: 768px) {
     .back-button {
         left: 20px;
@@ -286,5 +248,31 @@ p {
         width: 10px;
         height: 10px;
         margin-right: 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+        flex-direction: column;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .content {
+        padding: 50px 10%;
+    }
+
+    h1 {
+        font-size: 2.5em;
     }
 }
