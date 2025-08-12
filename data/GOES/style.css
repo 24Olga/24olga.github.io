@@ -276,3 +276,40 @@ p {
         font-size: 2.5em;
     }
 }
+
+@media (max-width: 768px) {
+    .content-body {
+        max-height: none !important;
+        overflow-y: visible !important;
+        padding: 0 20px !important;
+    }
+    
+    .content-body.active {
+        padding: 15px 20px !important;
+    }
+    
+    .content-body p {
+        margin-bottom: 15px;
+        font-size: 0.95em;
+        line-height: 1.6;
+        max-height: 3.2em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    
+    .content-body p.expanded {
+        max-height: none;
+        -webkit-line-clamp: unset;
+    }
+    
+    .action-button {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+}
