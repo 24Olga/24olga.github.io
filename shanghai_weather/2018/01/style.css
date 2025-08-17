@@ -11,6 +11,15 @@ body {
     min-height: 100vh;
 }
 
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    padding-top: 10px;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -112,10 +121,6 @@ body {
     border-color: #2980b9;
 }
 
-h1 {
-    text-align: center;
-}
-
 .content-container {
     width: 90%;
     max-width: 1200px;
@@ -160,9 +165,9 @@ h1 {
 .tooltip-content {
     visibility: hidden;
     width: 300px;
-    background-color: rgba(0,0,0,0.85);
-    color: #fff;
-    text-align: left;
+    background-color: rgba(20,20,20,0.75);
+    color: #eee;
+    text-align: center;
     border-radius: 4px;
     padding: 10px;
     position: absolute;

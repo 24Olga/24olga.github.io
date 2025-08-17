@@ -162,6 +162,7 @@ h1 {
     transition: all 0.3s;
     text-decoration: none;
     text-align: center;
+    border: 1px solid #0F76A4;
 }
 
 .month-btn:hover {
