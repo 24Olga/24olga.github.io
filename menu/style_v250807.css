@@ -11,14 +11,16 @@ body {
     min-height: 100vh;
 }
 
-.content {
-    padding: 100px 10%;
-    color: #2c3e50;
-}
-
 h1 {
     color: #2c3e50;
     text-decoration: none;
+    margin-bottom: 30px;
+    font-size: 2.4em;
+}
+
+.content {
+    padding: 100px 10%;
+    color: #2c3e50;
 }
 
 .navbar {
@@ -83,7 +85,7 @@ h1 {
 .back-button {
     position: absolute;
     left: 50px;
-    top: 80px;
+    top: 90px;
     display: flex;
     align-items: center;
     color: #3498db;
@@ -120,31 +122,6 @@ h1 {
     border-color: #2980b9;
 }
 
-@media (max-width: 768px) {
-  .navbar {
-      padding: 10px 20px;
-  }
-
-  .container {
-      width: 95%;
-      padding: 25px;
-  }
-
-  h1 {
-      font-size: 1.8em;
-  }
-
-  .file-btn {
-      width: 100%;
-      padding: 12px 25px;
-  }
-
-  .back-button {
-      left: 20px;
-      top: 70px;
-  }
-}
-
 .container {
   width: 85%;
   max-width: 800px;
@@ -157,15 +134,9 @@ h1 {
   text-align: center;
 }
 
-h1 {
-  color: #2c3e50;
-  margin-bottom: 30px;
-  font-size: 2.4em;
-}
-
 .file-btn {
   display: inline-block;
-  width: 500px;
+  width: 85%;
   padding: 15px 30px;
   margin: 15px 0;
   background: #3498db;
@@ -183,4 +154,30 @@ h1 {
   background: #2980b9;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(52,152,219,0.4);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      padding: 10px 20px;
+      width: 142%;
+  }
+
+  .container {
+      width: 142%;
+      padding: 25px;
+  }
+
+  h1 {
+      font-size: 1.8em;
+  }
+
+  .file-btn {
+      width: 85%;
+      padding: 12px 25px;
+  }
+
+  .back-button {
+      left: 20px;
+      top: 70px;
+  }
 }

@@ -1,124 +1,64 @@
-<!DOCTYPE HTML>
-<html lang='zh-CN'>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width initial-scale=1" />
-		<title>上海天气存档</title>
-		<link rel="icon" href="../../H8_FRGB_TRY.png" type="image/png" sizes="32x32">
-		<style>
-		    a{
-               color: black;
-            }
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上海天气存档（2024）</title>
+    <link rel="icon" href="../../H8_FRGB_TRY.png" type="image/png" sizes="32x32">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <a href="../../" class="logo">
+            <img src="../../logo.png" alt="网站Logo">
+        </a>
+        <a href="../" class="back-button">
+            返回
+        </a>
+        <ul class="nav-links">
+            <li><a href="../../data" target="_self">云图文件</a></li>
+            <li><a href="../../menu" target="_self">其他文件</a></li>
+            <li><a href="../../updates" target="_self">文件更新</a></li>
+            <li><a href="../../friend_link" target="_self">友情链接</a></li>
+            <li><a href="../../history" target="_self">本站历史</a></li>
+            <li><a href="../../en" target="_self">English</a></li>
+        </ul>
+    </nav>
+
+    <!-- 内容区域 -->
+    <div class="container">
+        <h1>2024年上海天气存档</h1>
+        <div class="month-grid">
+            <!-- 1-6月 -->
+            <div class="month-group">
+                <div class="month-header">1~6月</div>
+                <a class="month-btn disabled" title="2024年1月">2024年1月</a>
+                <a class="month-btn disabled" title="2024年2月">2024年2月</a>
+                <a class="month-btn disabled" title="2024年3月">2024年3月</a>
+                <a class="month-btn disabled" title="2024年4月">2024年4月</a>
+                <a class="month-btn disabled" title="2024年5月">2024年5月</a>
+                <a class="month-btn disabled" title="2024年6月">2024年6月</a>
+            </div>
+            
+            <!-- 7-12月 -->
+            <div class="month-group">
+                <div class="month-header">7~12月</div>
+                <a class="month-btn disabled" title="2024年7月">2024年7月</a>
+                <a class="month-btn disabled" title="2024年8月">2024年8月</a>
+                <a class="month-btn disabled" title="2024年9月">2024年9月</a>
+                <a class="month-btn disabled" title="2024年10月">2024年10月</a>
+                <a class="month-btn disabled" title="2024年11月">2024年11月</a>
+                <a class="month-btn disabled" title="2024年12月">2024年12月</a>
+            </div>
+        </div>
         
-            body, html {
-                   height: 100%;
-                   margin: 0;
-                   display: inline-flex;
-                   justify-content: center;
-                   align-items: center;
-                   background:url("../../img.bmp")  no-repeat center center; 
-                   background-size:cover;
-                   background-attachment:fixed; 
-                   background-color:#CCCCCC;
-            }
-            
-            .container {
-                   width: 100%;
-                   padding: 20px;
-                   background-color: rgba(255,255,255,0.5);
-                   border: 2px solid black;
-                   text-align: center;
-                   border-radius: 10px;
-            }
-            
-            .button {  
-                display: inline-block;
-                padding: 10px 20px;  
-                font-size: 16px;  
-                color: white;  
-                background-color: #3E8E41;  
-                text-decoration: none;
-                border: 2px solid darkgreen;  
-                border-radius: 5px;  
-                cursor: pointer;
-                transition: background-color 0.4s;
-            }
-              
-            .button:hover {  
-                background-color: #4CAF50;
-            }
-            
-            table, th, td {
-                border: none;
-            }
-                
-            th, td {
-                padding: 5px;
-                text-align: center;
-            }
-                
-            .wh{
-                width: 160px;
-                height: 5px;
-                font-size: 20px;
-            }
-            
-            .unavailable_button{
-                display: inline-block;
-                padding: 10px 20px;  
-                font-size: 16px;  
-                color: white;  
-                background-color: #727272;  
-                text-decoration: none;
-                border: 2px solid #595959;
-                border-radius: 5px;
-                transition: background-color 0.4s;
-            }
-            
-            .unavailable_button:hover {  
-                background-color: #909090;
-                cursor: not-allowed;
-            }
-            
-        </style>
-    </head>
-	
-	<body>
-		<div class='container'>
-			<h1><strong>&nbsp;&nbsp;上海天气存档（2024）</strong><br /></h1>
-			<table>
-			    <tr>
-			        <td class='wh'><strong>1~6月</strong></td>
-			        <td class='wh'><strong>7~12月</strong></td>
-			    </tr>
-			    <tr>
-			        <td class='wh'><a title='暂未完成！' class='unavailable_button'><strong>2024年1月</strong></a></td>
-			        <td class='wh'><a title='暂未完成！' class='unavailable_button'><strong>2024年7月</strong></a></td>
-			    </tr>
-			    <tr>
-			        <td class='wh'><a title='暂未完成！' class='unavailable_button'><strong>2024年2月</strong></a></td>
-			        <td class='wh'><a title='暂未完成！' class='unavailable_button'><strong>2024年8月</strong></a></td>
-			    </tr>
-			    <tr>
-			        <td class='wh'><a title='暂未完成！' class='unavailable_button'><strong>2024年3月</strong></a></td>
-			        <td class='wh'><a title='暂未完成！' class='unavailable_button'><strong>2024年9月</strong></a></td>
-			    </tr>
-			    <tr>
-			        <td class='wh'><a title='暂未完成！' class='unavailable_button'><strong>2024年4月</strong></a></td>
-			        <td class='wh'><a title='暂未完成！' class='unavailable_button'><strong>2024年10月</strong></a></td>
-			    </tr>
-			    <tr>
-			        <td class='wh'><a title='暂未完成！' class='unavailable_button'><strong>2024年5月</strong></a></td>
-			        <td class='wh'><a title='暂未完成！' class='unavailable_button'><strong>2024年11月</strong></a></td>
-			    </tr>
-			    <tr>
-			        <td class='wh'><a title='暂未完成！' class='unavailable_button'><strong>2024年6月</strong></a></td>
-			    </tr>
-			    <tr>
-			        <td class='wh'><a title='2023年' href='../2023' target='_self' class='button'><strong>&larr;上一页</strong></a></td>
-			        <td class='wh'><a title='我也是有底线的。。' class='unavailable_button'><strong>下一页&rarr;</strong></a></td>
-			    </tr>
-			</table>
-		</div>
-	</body>
+        <div class="pagination">
+            <a href="../2023" class="page-btn">&larr; 上一页</a>
+            <a href="../2025" class="page-btn">下一页 &rarr;</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
