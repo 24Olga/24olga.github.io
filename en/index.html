@@ -1,61 +1,32 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width initial-scale=1" />
-		<title>Justin's Website</title>
-		<link rel="icon" href="../H8_FRGB_TRY.png" type="image/png" sizes="32x32">
-		<style>
-		    a{
-		        color: black;
-		    }
-		    
-			body, html {
-				height: 100%;
-				margin: 0;
-				display: inline-flex;
-				justify-content: center;
-				align-items: center;
-				background:url("../img.bmp")  no-repeat center center; 
-   				background-size:cover;
-   				background-attachment:fixed; 
-   				background-color:#CCCCCC;
-			}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website of JimmyTao10525</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="../H8_FRGB_TRY.png" type="image/png" sizes="32x32">
+</head>
+<body>
+    <div id='currentTime'>Current time is loading...</div>
+    <nav class="navbar">
+        <a href="" class="logo">
+            <img src="../logo.png" alt="网站Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="../data" target="_self">Satellite Imageries</a></li>
+            <li><a href="../menu" target="_self">Other Weather Files</a></li>
+            <li><a href="../updates" target="_self">File Updates</a></li>
+            <li><a href="../friend_link" target="_self">Friend Links</a></li>
+            <li><a href="../history" target="_self">History</a></li>
+            <li><a href="../" target="_self">Chinese</a></li>
+        </ul>
+    </nav>
 
-			.container {
-				width: 100%;
-				padding: 20px;
-				background-color: rgba(255,255,255,0.5);
-				border: 2px solid black;
-				text-align: center;
-				border-radius: 10px;
-			}
-            
-            .button {  
-            display: inline-block;
-            padding: 10px 20px;  
-            font-size: 16px;  
-            color: white;  
-            background-color: #3E8E41;  
-            text-decoration: none;
-            border: 2px solid darkgreen;  
-            border-radius: 5px;  
-            cursor: pointer;
-            transition: background-color 0.4s;
-        }  
-          
-        .button:hover {  
-            background-color: #4CAF50;
-        }
-        
-		</style>
-	</head>
-
-	<body style="margin: 0;">
-		<div class='container'>
-			<h1><strong>Justin's Personal Website</strong><br /></h1>
-			<h3><a href='data' title='Go and Check the Files' target='_self' class='button'>Files</a></h3>
-		    <h3><a href='../' title='Chinese Version' target='_self' class='button'>Chinese</a></h3>
-		</div>
-	</body>
+    <div class="content">
+        <h1>Personal Website of JimmyTao10525</h1>
+        <p>Some introduction about the website.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
