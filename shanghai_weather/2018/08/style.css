@@ -166,6 +166,22 @@ tr.special:hover {
     background-color: rgba(245, 236, 96, 0.95);
 }
 
+td#high {
+    background-color: rgba(252, 205, 86, 0.9);
+}
+
+td#high:hover {
+    background-color: rgba(246, 186, 35, 0.9);
+}
+
+td#low {
+    background-color: rgba(102, 219, 252, 0.9);
+}
+
+td#low:hover {
+    background-color: rgba(43, 203, 248, 0.95);
+}
+
 .tooltip {
     position: relative;
 }
