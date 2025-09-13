@@ -158,14 +158,6 @@ p {
     background-color: rgba(255,255,255,0.8);
 }
 
-tr#special {
-    background-color: rgba(251, 245, 148, 0.9);
-}
-
-tr#special:hover {
-    background-color: rgba(245, 236, 96, 0.95);
-}
-
 .tooltip {
     position: relative;
 }
