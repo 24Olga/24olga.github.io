@@ -6,16 +6,23 @@ window.addEventListener('scroll', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const tooltips = document.querySelectorAll('.tooltip'); // 选中所有 tooltip
+  const tooltips = document.querySelectorAll('.tooltip');
 
   tooltips.forEach(tooltip => {
     tooltip.addEventListener('click', (e) => {
       e.stopPropagation();
-      tooltip.classList.toggle('show'); // 切换显示状态
+
+      // 先隐藏其他 tooltip
+      tooltips.forEach(t => {
+        if (t !== tooltip) {
+          t.classList.remove('show');
+        }
+      });
+
+      tooltip.classList.toggle('show');
     });
   });
 
-  // 点击页面其他地方隐藏所有 tooltip
   document.addEventListener('click', () => {
     tooltips.forEach(tooltip => tooltip.classList.remove('show'));
   });
