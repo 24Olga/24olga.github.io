@@ -10,6 +10,9 @@ function populateDateSelect(year, month) {
         );
         dateSelect.add(option);
     }
+
+    const summaryOption = new Option('月度总结', 'summary');
+    dateSelect.add(summaryOption);
 }
 
 function submitForm() {
@@ -52,13 +55,4 @@ window.addEventListener('scroll', () => {
     navbar.style.background = window.scrollY > 50 
         ? 'rgba(255,255,255,0.95)' 
         : 'rgba(255,255,255,0.85)';
-});
-
-// 添加按钮点击动画
-document.querySelector('.back-button').addEventListener('click', function(e) {
-    e.preventDefault();
-    this.style.transform = 'translateX(-10px)';
-    setTimeout(() => {
-        window.history.back();
-    }, 300);
 });

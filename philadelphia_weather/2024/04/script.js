@@ -10,6 +10,9 @@ function populateDateSelect(year, month) {
         );
         dateSelect.add(option);
     }
+
+    const summaryOption = new Option('月度总结', 'summary');
+    dateSelect.add(summaryOption);
 }
 
 function submitForm() {
@@ -41,7 +44,7 @@ window.addEventListener('load', () => {
         populateDateSelect(year, month - 1); // 月份需要减1
     } else {
         const defaultYear = 2024;
-        const defaultMonth = 3;
+        const defaultMonth = 4;
         document.querySelector('h1').textContent = `请选择日期 - ${defaultYear}年${defaultMonth}月`;
         populateDateSelect(defaultYear, defaultMonth - 1);
     }
