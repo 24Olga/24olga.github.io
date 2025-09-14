@@ -1,116 +1,40 @@
-<!DOCTYPE HTML>
-<html lang='zh-CN'>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width initial-scale=1" />
-		<title>上海天气存档</title>
-		<link rel="icon" href="../H8_FRGB_TRY.png" type="image/png" sizes="32x32">
-		<style>
-		    a{
-               color: black;
-            }
-        
-            body, html {
-                   height: 100%;
-                   margin: 0;
-                   display: flex;
-                   justify-content: center;
-                   align-items: center;
-                   background:url("../img.bmp")  no-repeat center center; 
-                   background-size:cover;
-                   background-attachment:fixed; 
-                   background-color:#CCCCCC;
-            }
-            
-            .container {
-                   width: 100%;
-                   padding: 20px;
-                   background-color: rgba(255,255,255,0.5);
-                   border: 2px solid black;
-                   text-align: center;
-                   border-radius: 10px;
-                   box-sizing: border-box;
-                   display: flex;
-                   flex-direction: column;
-                   justify-content: center;
-                   align-items: center;
-            }
-            
-            .container table {
-                margin: 0;
-                text-align: left;
-                border-collapse: collapse;
-            }
-            
-            .button {  
-                display: inline-block;
-                padding: 10px 20px;  
-                font-size: 16px;  
-                color: white;  
-                background-color: #3E8E41;  
-                text-decoration: none;
-                border: 2px solid darkgreen;  
-                border-radius: 5px;  
-                cursor: pointer;
-                transition: background-color 0.4s;
-            }
-              
-            .button:hover {  
-                background-color: #4CAF50;
-            }
-            
-            .wh{
-                width: 375px;
-                height: 0px;
-            }
-            
-            table, th, td {
-                border: none;
-            }
-                
-            th, td {
-                padding: 5px;
-                text-align: center;
-            }
-                
-            .wh{
-                width: 140px;
-                height: 5px;
-                font-size: 20px;
-            }
-            
-            .unavailable_button{
-                display: inline-block;
-                padding: 10px 20px;  
-                font-size: 16px;  
-                color: white;  
-                background-color: #727272;  
-                text-decoration: none;
-                border: 2px solid #595959;
-                border-radius: 5px;
-                transition: background-color 0.4s;
-            }
-            
-            .unavailable_button:hover {  
-                background-color: #909090;
-                cursor: not-allowed;
-            }
-            
-            
-        </style>
-    </head>
-	
-	<body>
-		<div class='container'>
-			<h1><b>费城天气存档（2024-2024）</b></h1>
-			<p><i>请先选择一个年份！</i></p>
-			<table>
-			    <tr>
-			        <td>
-    			        <a href='2024' target='_self' title='查看2024年的数据' class='button'><b>2024</b></a><br>
-    			    </td>
-    			</tr>
-			</table>
-		</div>
-	</body>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>费城天气存档</title>
+    <link rel="icon" href="../H8_FRGB_TRY.png" type="image/png" sizes="32x32">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <a href="../" class="logo">
+            <img src="../logo.png" alt="网站Logo">
+        </a>
+        <a href="../menu/" class="back-button">
+            返回
+        </a>
+        <ul class="nav-links">
+            <li><a href="../data" target="_self">云图文件</a></li>
+            <li><a href="../menu" target="_self">其他文件</a></li>
+            <li><a href="../updates" target="_self">文件更新</a></li>
+            <li><a href="../friend_link" target="_self">友情链接</a></li>
+            <li><a href="../history" target="_self">本站历史</a></li>
+            <li><a href="../en" target="_self">English</a></li>
+        </ul>
+    </nav>
+
+    <!-- 内容区域 -->
+    <div class="container">
+        <h1>费城天气存档（2024-2025）</h1>
+        <div class="btn-group">
+            <a href="2024" class="file-btn">2024</a><br>
+            <a href="" class="file-btn unavailable">2025</a>
+        </div>
+    </div>
+
+    <script src='script.js'></script>
+</body>
 </html>
