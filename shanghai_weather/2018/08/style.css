@@ -158,11 +158,11 @@ p {
     background-color: rgba(255,255,255,0.8);
 }
 
-tr.special {
+tr#special {
     background-color: rgba(251, 245, 148, 0.9);
 }
 
-tr.special:hover {
+tr#special:hover {
     background-color: rgba(245, 236, 96, 0.95);
 }
 
@@ -206,7 +206,7 @@ td#low:hover {
     white-space: normal;
 }
 
-.tooltip:hover .tooltip-content {
+.tooltip.show .tooltip-content {
     visibility: visible;
     opacity: 1;
 }
@@ -230,10 +230,5 @@ td#low:hover {
     .data-table td {
         padding: 8px 10px;
         font-size: 0.9em;
-    }
-
-    .tooltip.active .tooltip-content {
-        visibility: visible;
-        opacity: 1;
     }
 }

@@ -206,7 +206,7 @@ td#low:hover {
     white-space: normal;
 }
 
-.tooltip:hover .tooltip-content {
+.tooltip.show .tooltip-content {
     visibility: visible;
     opacity: 1;
 }
@@ -230,10 +230,5 @@ td#low:hover {
     .data-table td {
         padding: 8px 10px;
         font-size: 0.9em;
-    }
-
-    .tooltip.active .tooltip-content {
-        visibility: visible;
-        opacity: 1;
     }
 }
