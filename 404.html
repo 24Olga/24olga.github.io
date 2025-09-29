@@ -1,31 +1,214 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>暂时没有您想找的页面！！</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <link rel="icon" href="H8_FRGB_TRY.png" type="image/png" sizes="32x32">
-</head>
-<body>
-    <nav class="navbar">
-        <a href="https://2024olga.top/" class="logo">
-            <img src="logo.png" alt="网站Logo">
-        </a>
-        <ul class="nav-links">
-            <li><a href="data" target="_self">云图文件</a></li>
-            <li><a href="menu" target="_self">其他文件</a></li>
-            <li><a href="updates" target="_self">文件更新</a></li>
-            <li><a href="friend_link" target="_self">友情链接</a></li>
-            <li><a href="history" target="_self">本站历史</a></li>
-            <li><a href="en" target="_self">English</a></li>
-        </ul>
-    </nav>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>暂时没有您想找的页面！！</title>
+        <link rel="icon" href="H8_FRGB_TRY.png" type="image/png" sizes="32x32">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: '微软雅黑', sans-serif;
+            }
 
-    <div class="content error container">
-        <h1>404 NOT FOUND</h1>
-        <p class="long">没有找到您想要访问的页面呢😭<br>请确认网址输入是否正确🙂</p>
-    </div>
-    <script src="script.js"></script>
-</body>
+            body {
+                background: url('background.png') no-repeat center center fixed;
+                background-size: cover;
+                min-height: 100vh;
+            }
+
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 50px;
+                background-color: rgba(255, 255, 255, 0.85);
+                backdrop-filter: blur(5px);
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                position: relative;
+            }
+
+            .logo img {
+                height: 40px;
+                max-width: 180px;
+                transition: transform 0.3s;
+            }
+
+            .logo:hover img {
+                transform: scale(1.05);
+            }
+
+            .nav-links {
+                display: flex;
+                gap: 30px;
+            }
+
+            .nav-links li {
+                list-style: none;
+            }
+
+            .nav-links a {
+                text-decoration: none;
+                color: #2c3e50;
+                font-weight: 500;
+                padding: 10px 15px;
+                border-radius: 5px;
+                transition: all 0.3s;
+                position: relative;
+            }
+
+            .nav-links a::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: #3498db;
+                transition: width 0.3s;
+            }
+
+            .nav-links a:hover::before {
+                width: 100%;
+            }
+
+            .nav-links a:hover {
+                color: #3498db;
+            }
+
+            .content {
+                padding: 100px 20%;
+                color: white;
+                text-align: center;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            }
+
+            .content.error {
+                color: #323232;
+            }
+
+            h1 {
+                font-size: 3.5em;
+                margin-bottom: 30px;
+                animation: fadeInUp 1s ease;
+            }
+
+            p {
+                font-size: 1.5em;
+                line-height: 1.6;
+                animation: fadeIn 1.5s ease;
+            }
+
+            p.long {
+                margin-bottom: 3.5rem;
+            }
+
+            .container {
+                width: 85%;
+                margin: 100px auto;
+                padding: 40px;
+                background: rgba(255,255,255,0.9);
+                backdrop-filter: blur(3px);
+                border-radius: 12px;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @media (max-width: 768px) {
+                .navbar {
+                    padding: 10px 20px;
+                    flex-direction: column;
+                }
+
+                .logo img {
+                    height: 35px;
+                }
+
+                .nav-links {
+                    margin-top: 15px;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 15px;
+                }
+
+                .content {
+                    padding: 50px 10%;
+                }
+
+                h1 {
+                    font-size: 2.5em;
+                }
+            }
+
+            #currentTime{
+              position: fixed;
+              right: 20px;
+              bottom: 20px;
+              color: #FFFFFF;
+              font-family: Arial, Sans-Serif;
+              padding: 5px 10px;
+              border-radius: 5px;
+              box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="https://2024olga.top/" class="logo">
+                <img src="logo.png" alt="网站Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="data" target="_self">云图文件</a></li>
+                <li><a href="menu" target="_self">其他文件</a></li>
+                <li><a href="updates" target="_self">文件更新</a></li>
+                <li><a href="friend_link" target="_self">友情链接</a></li>
+                <li><a href="history" target="_self">本站历史</a></li>
+                <li><a href="en" target="_self">English</a></li>
+            </ul>
+        </nav>
+
+        <div class="content error container">
+            <h1>404 NOT FOUND</h1>
+            <p class="long">没有找到您想要访问的页面呢😭<br>请确认网址输入是否正确🙂</p>
+        </div>
+        <script>
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.style.background = 'rgba(255,255,255,0.95)';
+                    navbar.style.boxShadow = '0 2px 15px rgba(0,0,0,0.1)';
+                } else {
+                    navbar.style.background = 'rgba(255,255,255,0.85)';
+                    navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+                }
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    this.style.animation = 'clickEffect 0.3s';
+                    setTimeout(() => {
+                        window.location.href = this.href;
+                    }, 300);
+                });
+            });
+        </script>
+    </body>
 </html>
