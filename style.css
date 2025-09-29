@@ -77,10 +77,6 @@ body {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-.content.error {
-    color: #323232;
-}
-
 h1 {
     font-size: 3.5em;
     margin-bottom: 30px;
@@ -91,10 +87,6 @@ p {
     font-size: 1.5em;
     line-height: 1.6;
     animation: fadeIn 1.5s ease;
-}
-
-p.long {
-    margin-bottom: 3.5rem;
 }
 
 .container {
