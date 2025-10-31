@@ -27,7 +27,12 @@ function submitForm() {
 
 window.addEventListener('load', () => {
     const pathSegments = window.location.pathname.split('/').filter(s => s);
-    
+
+    const lastSegment = pathSegments[pathSegments.length - 1];
+    if (lastSegment && !isNaN(lastSegment)) {
+        return;
+    }
+
     let year, month;
     for (let i = pathSegments.length - 1; i >= 0; i--) {
         if (/^\d{4}$/.test(pathSegments[i])) {
@@ -44,7 +49,7 @@ window.addEventListener('load', () => {
         populateDateSelect(year, month - 1); // 月份需要减1
     } else {
         const defaultYear = 2024;
-        const defaultMonth = 4;
+        const defaultMonth = 3;
         document.querySelector('h1').textContent = `请选择日期 - ${defaultYear}年${defaultMonth}月`;
         populateDateSelect(defaultYear, defaultMonth - 1);
     }
@@ -55,13 +60,4 @@ window.addEventListener('scroll', () => {
     navbar.style.background = window.scrollY > 50 
         ? 'rgba(255,255,255,0.95)' 
         : 'rgba(255,255,255,0.85)';
-});
-
-// 添加按钮点击动画
-document.querySelector('.back-button').addEventListener('click', function(e) {
-    e.preventDefault();
-    this.style.transform = 'translateX(-10px)';
-    setTimeout(() => {
-        window.history.back();
-    }, 300);
 });
