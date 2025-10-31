@@ -3,7 +3,7 @@ function populateDateSelect(year, month) {
     dateSelect.innerHTML = '';
     
     const daysInMonth = new Date(year, month + 1, 0).getDate();
-    for (let day = 1; day <= Math.min(daysInMonth, 25); day++) {
+    for (let day = 1; day <= daysInMonth; day++) {
         const option = new Option(
             `${String(day).padStart(2, '0')}日`,
             String(day).padStart(2, '0')
@@ -11,8 +11,8 @@ function populateDateSelect(year, month) {
         dateSelect.add(option);
     }
 
-    // const summaryOption = new Option('月度总结', 'summary');
-    // dateSelect.add(summaryOption);
+    const summaryOption = new Option('月度总结', 'summary');
+    dateSelect.add(summaryOption);
 }
 
 function submitForm() {
@@ -27,7 +27,12 @@ function submitForm() {
 
 window.addEventListener('load', () => {
     const pathSegments = window.location.pathname.split('/').filter(s => s);
-    
+
+    const lastSegment = pathSegments[pathSegments.length - 1];
+    if (lastSegment && !isNaN(lastSegment)) {
+        return;
+    }
+
     let year, month;
     for (let i = pathSegments.length - 1; i >= 0; i--) {
         if (/^\d{4}$/.test(pathSegments[i])) {
@@ -44,7 +49,7 @@ window.addEventListener('load', () => {
         populateDateSelect(year, month - 1); // 月份需要减1
     } else {
         const defaultYear = 2024;
-        const defaultMonth = 5;
+        const defaultMonth = 3;
         document.querySelector('h1').textContent = `请选择日期 - ${defaultYear}年${defaultMonth}月`;
         populateDateSelect(defaultYear, defaultMonth - 1);
     }
@@ -55,13 +60,4 @@ window.addEventListener('scroll', () => {
     navbar.style.background = window.scrollY > 50 
         ? 'rgba(255,255,255,0.95)' 
         : 'rgba(255,255,255,0.85)';
-});
-
-// 添加按钮点击动画
-document.querySelector('.back-button').addEventListener('click', function(e) {
-    e.preventDefault();
-    this.style.transform = 'translateX(-10px)';
-    setTimeout(() => {
-        window.history.back();
-    }, 300);
 });
