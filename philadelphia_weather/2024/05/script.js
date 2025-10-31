@@ -11,7 +11,7 @@ function populateDateSelect(year, month) {
         dateSelect.add(option);
     }
 
-    const summaryOption = new Option('月度总结', 'summary');
+    const summaryOption = new Option('本月总结', 'summary');
     dateSelect.add(summaryOption);
 }
 
