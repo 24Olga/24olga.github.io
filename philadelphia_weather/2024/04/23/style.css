@@ -20,6 +20,9 @@ h1 {
 
 div img {
     padding: 1rem;
+    max-width: calc(100% - 2rem);
+    height: auto;
+    box-sizing: border-box;
 }
 
 .content {
