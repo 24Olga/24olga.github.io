@@ -27,7 +27,12 @@ function submitForm() {
 
 window.addEventListener('load', () => {
     const pathSegments = window.location.pathname.split('/').filter(s => s);
-    
+
+    const lastSegment = pathSegments[pathSegments.length - 1];
+    if (lastSegment && !isNaN(lastSegment)) {
+        return;
+    }
+
     let year, month;
     for (let i = pathSegments.length - 1; i >= 0; i--) {
         if (/^\d{4}$/.test(pathSegments[i])) {
