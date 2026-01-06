@@ -31,8 +31,10 @@ class DataDirList {
   }
 
   render(items) {
+    // 只渲染搜索结果
     if (!items || items.length === 0) {
-      this.container.innerHTML = '<p>暂无数据文件夹</p>';
+      this.container.innerHTML = '<p class="no-results">未找到匹配项</p>';
+      this.container.style.display = 'block'; // 显示“无结果”
       return;
     }
 
@@ -43,7 +45,7 @@ class DataDirList {
       groups[item.category].push(item);
     });
 
-    let html = `<p class="dir-count">共 <strong>${this.total}</strong> 个数据文件夹：</p>`;
+    let html = `<p class="dir-count">找到 <strong>${items.length}</strong> 个结果：</p>`;
     
     for (const [category, groupItems] of Object.entries(groups).sort()) {
       html += `
@@ -63,39 +65,26 @@ class DataDirList {
     }
 
     this.container.innerHTML = html;
-  }
-
-  setupSearch() {
-    const searchInput = document.getElementById('dir-search');
-    const countEl = document.getElementById('result-count');
-    
-    if (!searchInput || !countEl) return;
-
-    // 初始显示总数
-    countEl.textContent = `共 ${this.total} 个`;
-
-    searchInput.addEventListener('input', (e) => {
-      const query = e.target.value.trim().toLowerCase();
-      this.filterItems(query, countEl);
-    });
+    this.container.style.display = 'block'; // 显示结果
   }
 
   filterItems(query, countEl) {
-    let filtered = this.items;
-    if (query) {
-      filtered = this.items.filter(item => 
-        item.name.toLowerCase().includes(query) ||
-        item.category.toLowerCase().includes(query) ||
-        item.path.toLowerCase().includes(query)
-      );
-      countEl.textContent = `找到 ${filtered.length} 个（共 ${this.total}）`;
-    } else {
+    // 清空搜索时隐藏列表 + 显示提示
+    if (!query.trim()) {
       countEl.textContent = `共 ${this.total} 个`;
+      this.container.style.display = 'none'; // 隐藏列表
+      return;
     }
 
-    this.render(filtered);
+    const filtered = this.items.filter(item => 
+      item.name.toLowerCase().includes(query) ||
+      item.category.toLowerCase().includes(query) ||
+      item.path.toLowerCase().includes(query)
+    );
+
+    countEl.textContent = `找到 ${filtered.length} 个（共 ${this.total}）`;
+    this.render(filtered); // 自动显示/隐藏容器
   }
-}
 
 document.addEventListener('DOMContentLoaded', () => {
   new DataDirList('data-dir-container');
