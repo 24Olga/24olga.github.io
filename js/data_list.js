@@ -18,7 +18,7 @@ class DataDirList {
       this.items = data.items || [];
       this.total = data.total || this.items.length; // 兼容无 total 字段
 
-      this.render(this.items);
+      // this.render(this.items);
       this.setupSearch();
     } catch (err) {
       console.error('加载数据目录失败:', err);
@@ -85,6 +85,25 @@ class DataDirList {
     countEl.textContent = `找到 ${filtered.length} 个（共 ${this.total}）`;
     this.render(filtered); // 自动显示/隐藏容器
   }
+
+setupSearch() {
+  const searchInput = document.getElementById('dir-search');
+  const countEl = document.getElementById('result-count');
+  
+  if (!searchInput || !countEl) {
+    console.warn('未找到搜索框或计数元素');
+    return;
+  }
+
+  // 初始化计数
+  countEl.textContent = `共 ${this.total} 个`;
+
+  // 绑定输入事件
+  searchInput.addEventListener('input', (e) => {
+    const query = e.target.value.trim().toLowerCase();
+    this.filterItems(query, countEl);
+  });
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   new DataDirList('data-dir-container');
