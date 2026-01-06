@@ -11,7 +11,7 @@ class DataDirList {
 
   async init() {
     try {
-      const res = await fetch('/data/data_dirs_index.json');
+      const res = await fetch('/data_dirs_index.json');
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
 
@@ -25,7 +25,7 @@ class DataDirList {
       this.container.innerHTML = `
         <div class="alert alert-error">
           <strong>加载失败</strong>：无法获取数据目录列表。<br>
-          请检查 <code>/data/data_dirs_index.json</code> 是否存在。
+          请检查 <code>/data_dirs_index.json</code> 是否存在。
         </div>`;
     }
   }
@@ -54,7 +54,7 @@ class DataDirList {
           <ul class="dir-list">
             ${groupItems.map(item => `
               <li>
-                <a href="/data/${item.path}/" class="dir-link">
+                <a href="/${item.path}/" class="dir-link">
                   <span class="dir-name">${item.name}</span>
                 </a>
                 <span class="dir-category-tag">${item.category}</span>
@@ -82,7 +82,7 @@ class DataDirList {
       item.path.toLowerCase().includes(query)
     );
 
-    countEl.textContent = `找到 ${filtered.length} 个（共 ${this.total}）`;
+    countEl.textContent = `找到 ${filtered.length} 个（共 ${this.total} 个）`;
     this.render(filtered); // 自动显示/隐藏容器
   }
 

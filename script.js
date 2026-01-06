@@ -5,7 +5,7 @@ function updateTime() {
  const minutes = String(beijingTime.getMinutes()).padStart(2, '0')
  const seconds = String(beijingTime.getSeconds()).padStart(2, '0')
  
- const timeString = `现在是北京时间 ${beijingTime.getFullYear()}年${String(beijingTime.getMonth() + 1).padStart(2, '0')}月${String(beijingTime.getDate()).padStart(2, '0')}日 ${hours}:${minutes}:${seconds}`;    
+ const timeString = `现在是 ${beijingTime.getFullYear()}/${String(beijingTime.getMonth() + 1).padStart(2, '0')}/${String(beijingTime.getDate()).padStart(2, '0')} ${hours}:${minutes}:${seconds}`;    
  document.getElementById('currentTime').innerText = timeString;
 }
 
@@ -30,5 +30,18 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         setTimeout(() => {
             window.location.href = this.href;
         }, 300);
+    });
+});
+
+document.querySelectorAll('.content-header').forEach(header => {
+    header.addEventListener('click', function() {
+        const contentBody = this.nextElementSibling;
+        const isActive = this.classList.toggle('active');
+        
+        if (isActive) {
+            contentBody.classList.add('active');
+        } else {
+            contentBody.classList.remove('active');
+        }
     });
 });
