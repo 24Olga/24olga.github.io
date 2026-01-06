@@ -86,23 +86,24 @@ class DataDirList {
     this.render(filtered); // 自动显示/隐藏容器
   }
 
-setupSearch() {
-  const searchInput = document.getElementById('dir-search');
-  const countEl = document.getElementById('result-count');
-  
-  if (!searchInput || !countEl) {
-    console.warn('未找到搜索框或计数元素');
-    return;
+  setupSearch() {
+    const searchInput = document.getElementById('dir-search');
+    const countEl = document.getElementById('result-count');
+    
+    if (!searchInput || !countEl) {
+      console.warn('未找到搜索框或计数元素');
+      return;
+    }
+
+    // 初始化计数
+    countEl.textContent = `共 ${this.total} 个`;
+
+    // 绑定输入事件
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.trim().toLowerCase();
+      this.filterItems(query, countEl);
+    });
   }
-
-  // 初始化计数
-  countEl.textContent = `共 ${this.total} 个`;
-
-  // 绑定输入事件
-  searchInput.addEventListener('input', (e) => {
-    const query = e.target.value.trim().toLowerCase();
-    this.filterItems(query, countEl);
-  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
