@@ -54,7 +54,7 @@ class DataDirList {
           <ul class="dir-list">
             ${groupItems.map(item => `
               <li>
-                <a href="/${item.path}/" class="dir-link">
+                <a href="/data/${item.path}/" class="dir-link">
                   <span class="dir-name">${item.name}</span>
                 </a>
                 <span class="dir-category-tag">${item.category}</span>
