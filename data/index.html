@@ -26,101 +26,31 @@
     </nav>
 
     <div class="content">
-        <h1>卫星云图存档</h1>
-        <!-- 极轨 -->
-        <div class="content-block">
-            <div class="content-header">
-                <h3>AVHRR</h3>
-            </div>
-            <div class="content-body">
-                <p>AVHRR是极轨仪器，分为4km（GAC）分辨率图像和1.1km（FRAC，HRPT，LAC）分辨率图像，数据从1978年开始。</p>
-                <a href="AVHRR" class="action-button">查看</a>
-            </div>
-        </div>
-        <div class="content-block">
-            <div class="content-header">
-                <h3>MODIS</h3>
-            </div>
-            <div class="content-body">
-                <p>MODIS是一个极轨仪器，装在两颗卫星，AQUA和TERRA上，数据从2000年开始，分辨率1km，有水汽通道。</p>
-                <a href="MODIS" class="action-button">查看</a>
-            </div>
-        </div>
-        <div class="content-block">
-            <div class="content-header">
-                <h3>SGLI</h3>
-            </div>
-            <div class="content-body">
-                <p>SGLI是极轨卫星，装在卫星GCOM-C上，提供高分辨率图像。有250m, 500m, 1000m三种分辨率，部分地区没有250m高分辨率图像。</p>
-                <a href="SGLI" class="action-button">查看</a>
-            </div>
-        </div>
-        <div class="content-block">
-            <div class="content-header">
-                <h3>SLSTR</h3>
-            </div>
-            <div class="content-body">
-                <p>SLSTR是极轨卫星，搭载在S3A和S3B两颗卫星上，提供高分辨率气象数据，对于中眼气旋扫到的眼温效果极佳。</p>
-                <a href="SLSTR" class="action-button">查看</a>
-            </div>
-        </div>
-        <div class="content-block">
-            <div class="content-header">
-                <h3>VIIRS</h3>
-            </div>
-            <div class="content-body">
-                <p>VIIRS是极轨卫星，搭载在三颗发射时间不同的卫星上，分辨率有375m和750m两种类型。</p>
-                <a href="VIIRS" class="action-button">查看</a>
-            </div>
-        </div>
+        <h1>气旋图片检索</h1>
 
-        <!-- 静轨 -->
-        <div class="content-block">
-            <div class="content-header">
-                <h3>GEO-KOMPSAT-2A</h3>
-            </div>
-            <div class="content-body">
-                <p>GEO-KOMPSAT-2A，简称GK2A，是一颗韩国发射的卫星，主要服务于西北太平洋。与向日葵不同的是，GK2A的中心纬度为东经128.2°，比向日葵（东经140.7°）要偏西不少，且不支持机动观测。因此，GK2A适合位于中国南海、巴士海峡等区域的台风。</p>
-                <a href="GK2A" class="action-button">查看</a>
-            </div>
+            <!-- 数据目录列表 -->
+            <section id="data-dir-section">
+              <!-- 搜索框 -->
+              <div class="search-box" style="margin: 1rem 0; display: flex; align-items: center; gap: 0.5rem;">
+                <input 
+                  type="text" 
+                  id="dir-search" 
+                  placeholder="搜索名称（支持MODIS、25Melissa、Melissa、FLDK、TARGET-AREA等形式）" 
+                  autocomplete="off"
+                  style="flex: 1; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;"
+                >
+                <small id="result-count" style="color: #666; font-size: 0.9em;">
+                  加载中…
+                </small>
+              </div>
+
+              <div id="data-dir-container" style="display:none;">
+                <p>找到匹配项后将显示…</p>
+              </div>
+
+            </section>
+
         </div>
-        <div class="content-block">
-            <div class="content-header">
-                <h3>GOES</h3>
-            </div>
-            <div class="content-body">
-                <p>GOES-16，负责美国区以及大部分大西洋的图像服务。GOES-17/18，负责没过去以及东太平洋的图像服务。GOES数据有三种不同的区域范围，分别为Conus（美国本土，除阿拉斯加和夏威夷之外），FLDK（Full Disk，全圆盘），和MESOSCALE（类似于Himawari的机动观测）。GOES-19即将替代GOES-16。</p>
-                <a href="GOES" class="action-button">查看</a>
-            </div>
-        </div>
-        <div class="content-block">
-            <div class="content-header">
-                <h3>HIMAWARI-8/9</h3>
-            </div>
-            <div class="content-body">
-                <p>向日葵8号及9号卫星是日本的气象卫星，分了三种不同的观测模式。FLDK是全圆盘的简称，文件夹里主要放置经过投影的全圆盘云图。TARGET-AREA，中文机动观测，有台风活跃的时候对准台风拍摄。JAPAN-AREA也是一种观测模式，对准的是日本，正常情况很少使用该模式。</p>
-                <a href="HIMAWARI" class="action-button">查看</a>
-            </div>
-        </div>
-        <div class="content-block">
-            <div class="content-header">
-                <h3>MET-12</h3>
-            </div>
-            <div class="content-body">
-                <p>MET-12（原名MTG-I1）是2024年9月新投入使用的卫星，负责拍摄非洲以及欧洲的图像。区别于MET系列的其他卫星的是，红外图像的分辨率为1km。</p>
-                <a href="MET-12" class="action-button">查看</a>
-            </div>
-        </div>
-        <div class="content-block">
-            <div class="content-header">
-                <h3>MSG-IODC</h3>
-            </div>
-            <div class="content-body">
-                <p>这里包含着MSG系列卫星拍摄的印度洋气旋画面。这个区域的卫星有些复杂，原先是MET-8（又名MSG-1）在2017/2/1~2022/6/1负责拍摄，2022/6/1~今调派MET-9（又名MSG-2）拍摄该区域的图像，这两颗卫星均搭载SEVIRI仪器。在此之前从2006年~2017年由MET-7（又名MFG）搭载MVIRI仪器负责拍摄，但本站主要收集SEVIRI仪器拍摄的气旋画面。</p>
-                <a href="MSG-IODC" class="action-button">查看</a>
-            </div>
-        </div>
-    </div>
 
     <div class="welcome-modal" id="welcomeModal">
         <div class="welcome-content">
@@ -132,5 +62,7 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="data_list.js" defer></script>
+
 </body>
 </html>

@@ -72,19 +72,26 @@ body {
 
 .content {
     padding: 100px 20%;
-    color: white;
+    color: #888888;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(115, 115, 115, 0.5);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 h1 {
+    color: white;
     font-size: 3.5em;
     margin-bottom: 30px;
     animation: fadeInUp 1s ease;
 }
 
+h2 {
+    color: #DDDDDD;
+    text-decoration: none;
+}
+
 p {
-    font-size: 1.5em;
+    font-size: 1.1rem;
     line-height: 1.6;
     animation: fadeIn 1.5s ease;
 }
@@ -152,84 +159,70 @@ p {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* 数据目录列表样式 */
-#data-dir-section {
-  margin: 2rem 0;
-  padding: 1.5rem;
-  border: 1px solid #eee;
-  border-radius: 6px;
-  background-color: #fafafa;
+@media (max-width: 768px) {
+    .content-block {
+        width: 95%;
+    }
+
+    .content-header {
+        padding: 15px 20px;
+    }
+
+    .content-body p {
+        font-size: 0.95em;
+    }
 }
 
-.dir-count {
-  font-size: 1.1em;
-  color: #555;
-  margin-bottom: 1.2rem;
+.content-block {
+    background: white;
+    width: 85%;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    overflow: hidden;
 }
 
-.dir-category h3 {
-  margin: 1.2rem 0 0.6rem;
-  color: #2c6e49;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 0.3rem;
+.content-block:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
-.dir-list {
-  list-style: none;
-  padding-left: 0;
+.content-header {
+    padding: 20px 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.dir-list li {
-  padding: 0.4rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px dashed #eee;
+.content-header::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #3498db;
+    transition: transform 0.3s;
 }
 
-.dir-name {
-  font-family: 'Courier New', monospace;
-  font-weight: bold;
-  color: #1a5d38;
+.content-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 30px;
 }
 
-.dir-category-tag {
-  background: #e3f2fd;
-  color: #1976d2;
-  padding: 0.2em 0.6em;
-  border-radius: 4px;
-  font-size: 0.85em;
-  white-space: nowrap;
+.content-body p {
+    margin-bottom: 25px;
+    line-height: 1.8;
+    color: #666;
 }
 
-.dir-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  padding: 0.4rem 0;
+.content-body.active {
+    max-height: 500px;
+    padding: 20px 30px;
 }
 
-.dir-link:hover {
-  background-color: #f0f9ff;
-  border-radius: 4px;
-  color: #1976d2;
-}
-
-.dir-name {
-  font-family: 'Courier New', monospace;
-  font-weight: bold;
-}
-
-/* 搜索无结果提示 */
-.no-results {
-  color: #888;
-  font-style: italic;
-  padding: 1rem;
-  text-align: center;
-}
-
-/* 搜索框聚焦时高亮 */
-#dir-search:focus {
-  outline: 2px solid #4a90e2;
-  outline-offset: 2px;
+.content-header.active::after {
+    transform: rotate(180deg);
 }
