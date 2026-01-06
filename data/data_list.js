@@ -1,4 +1,4 @@
-// js/data_list.js
+// data_list.js
 class DataDirList {
   constructor(containerId) {
     this.container = document.getElementById(containerId);
@@ -11,7 +11,7 @@ class DataDirList {
 
   async init() {
     try {
-      const res = await fetch('/data_dirs_index.json');
+      const res = await fetch('/data/data_dirs_index.json');
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
 
