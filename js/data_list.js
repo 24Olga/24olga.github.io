@@ -1,6 +1,4 @@
 // js/data_list.js
-// 作用：加载 data_dirs_index.json，并渲染带分类的文件夹列表
-
 class DataDirList {
   constructor(containerId) {
     this.container = document.getElementById(containerId);
@@ -13,12 +11,15 @@ class DataDirList {
 
   async init() {
     try {
-      // 加载 JSON
       const res = await fetch('/data/data_dirs_index.json');
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
 
-      this.render(data);
+      this.items = data.items || [];
+      this.total = data.total || this.items.length; // 兼容无 total 字段
+
+      this.render(this.items);
+      this.setupSearch();
     } catch (err) {
       console.error('加载数据目录失败:', err);
       this.container.innerHTML = `
@@ -29,30 +30,29 @@ class DataDirList {
     }
   }
 
-  render(data) {
-    if (!data.items || data.items.length === 0) {
+  render(items) {
+    if (!items || items.length === 0) {
       this.container.innerHTML = '<p>暂无数据文件夹</p>';
       return;
     }
 
     // 按 category 分组
     const groups = {};
-    data.items.forEach(item => {
+    items.forEach(item => {
       if (!groups[item.category]) groups[item.category] = [];
       groups[item.category].push(item);
     });
 
-    // 构建 HTML
-    let html = `<p class="dir-count">共 <strong>${data.total}</strong> 个数据文件夹：</p>`;
+    let html = `<p class="dir-count">共 <strong>${this.total}</strong> 个数据文件夹：</p>`;
     
-    for (const [category, items] of Object.entries(groups).sort()) {
+    for (const [category, groupItems] of Object.entries(groups).sort()) {
       html += `
         <div class="dir-category">
           <h3>${category}</h3>
           <ul class="dir-list">
-            ${items.map(item => `
+            ${groupItems.map(item => `
               <li>
-                <a href="/data-view/${item.path}/" class="dir-link">
+                <a href="/data/${item.path}/" class="dir-link">
                   <span class="dir-name">${item.name}</span>
                 </a>
                 <span class="dir-category-tag">${item.category}</span>
@@ -64,9 +64,39 @@ class DataDirList {
 
     this.container.innerHTML = html;
   }
+
+  setupSearch() {
+    const searchInput = document.getElementById('dir-search');
+    const countEl = document.getElementById('result-count');
+    
+    if (!searchInput || !countEl) return;
+
+    // 初始显示总数
+    countEl.textContent = `共 ${this.total} 个`;
+
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.trim().toLowerCase();
+      this.filterItems(query, countEl);
+    });
+  }
+
+  filterItems(query, countEl) {
+    let filtered = this.items;
+    if (query) {
+      filtered = this.items.filter(item => 
+        item.name.toLowerCase().includes(query) ||
+        item.category.toLowerCase().includes(query) ||
+        item.path.toLowerCase().includes(query)
+      );
+      countEl.textContent = `找到 ${filtered.length} 个（共 ${this.total}）`;
+    } else {
+      countEl.textContent = `共 ${this.total} 个`;
+    }
+
+    this.render(filtered);
+  }
 }
 
-// 自动初始化（页面加载完成后）
 document.addEventListener('DOMContentLoaded', () => {
   new DataDirList('data-dir-container');
 });

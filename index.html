@@ -28,12 +28,29 @@
         <div class="content">
             <h1>JimmyTao10525的个人网站</h1>
 
-            <!-- 数据目录列表（新增） -->
+            <!-- 数据目录列表 -->
             <section id="data-dir-section">
-                <h2>数据文件夹索引</h2>
-                <div id="data-dir-container">
-                    <p>正在加载数据目录…</p>
-                </div>
+              <h2>数据文件夹索引</h2>
+
+              <!-- 搜索框 -->
+              <div class="search-box" style="margin: 1rem 0; display: flex; align-items: center; gap: 0.5rem;">
+                <input 
+                  type="text" 
+                  id="dir-search" 
+                  placeholder="请搜索卫星/仪器名或气旋名（如MODIS、25Melissa）…" 
+                  autocomplete="off"
+                  style="flex: 1; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;"
+                >
+                <small id="result-count" style="color: #666; font-size: 0.9em;">
+                  加载中…
+                </small>
+              </div>
+
+              <!-- 列表容器 -->
+              <div id="data-dir-container">
+                <p style="color: #888;">正在加载数据目录…</p>
+              </div>
+              
             </section>
 
         </div>
