@@ -26,27 +26,31 @@
     </nav>
 
     <div class="content">
-        <h1>气旋图片检索</h1>
+        <h1>云图文件搜索</h1>
 
             <!-- 数据目录列表 -->
             <section id="data-dir-section">
-              <!-- 搜索框 -->
-              <div class="search-box" style="margin: 1rem 0; display: flex; align-items: center; gap: 0.5rem;">
-                <input 
-                  type="text" 
-                  id="dir-search" 
-                  placeholder="搜索名称（支持MODIS、25Melissa、Melissa、FLDK、TARGET-AREA等形式）" 
-                  autocomplete="off"
-                  style="flex: 1; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;"
-                >
-                <small id="result-count" style="color: #666; font-size: 0.9em;">
-                  加载中…
-                </small>
-              </div>
+                <!-- 搜索框 -->
+                <div class="search-box" style="margin: 1rem 0; display: flex; align-items: center; gap: 0.5rem;">
+                    <input 
+                        type="text" 
+                        id="dir-search" 
+                        placeholder="请输入你想要搜索的内容..." 
+                        autocomplete="off"
+                        style="flex: 1; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;"
+                    >
 
-              <div id="data-dir-container" style="display:none;">
-                <p>找到匹配项后将显示…</p>
-              </div>
+                    <small id="result-count" style="color: #666; font-size: 0.9em;">
+                        加载中…
+                    </small>
+
+                </div>
+
+                <div id="data-dir-container" style="display:none;">
+                    <p>找到匹配项后将显示…</p>
+                </div>
+
+                <p style="text-align: center;">支持搜索25Melissa、Melissa、MODIS、FLDK等形式~</p>
 
             </section>
 
