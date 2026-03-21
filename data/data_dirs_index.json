@@ -1,6 +1,56 @@
 {
-  "total": 103,
+  "total": 113,
   "items": [
+    {
+      "name": "00Bilis",
+      "category": "AVHRR",
+      "path": "AVHRR\\00Bilis"
+    },
+    {
+      "name": "00Damrey",
+      "category": "AVHRR",
+      "path": "AVHRR\\00Damrey"
+    },
+    {
+      "name": "01Juliette",
+      "category": "AVHRR",
+      "path": "AVHRR\\01Juliette"
+    },
+    {
+      "name": "04Bento",
+      "category": "AVHRR",
+      "path": "AVHRR\\04Bento"
+    },
+    {
+      "name": "05Nabi",
+      "category": "AVHRR",
+      "path": "AVHRR\\05Nabi"
+    },
+    {
+      "name": "05Rita",
+      "category": "AVHRR",
+      "path": "AVHRR\\05Rita"
+    },
+    {
+      "name": "06Cimaron",
+      "category": "AVHRR",
+      "path": "AVHRR\\06Cimaron"
+    },
+    {
+      "name": "09Melor",
+      "category": "AVHRR",
+      "path": "AVHRR\\09Melor"
+    },
+    {
+      "name": "09Nida",
+      "category": "AVHRR",
+      "path": "AVHRR\\09Nida"
+    },
+    {
+      "name": "09Parma",
+      "category": "AVHRR",
+      "path": "AVHRR\\09Parma"
+    },
     {
       "name": "14Vongfong",
       "category": "AVHRR",
