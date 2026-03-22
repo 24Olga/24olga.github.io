@@ -1,5 +1,5 @@
 {
-  "total": 113,
+  "total": 117,
   "items": [
     {
       "name": "00Bilis",
@@ -22,6 +22,16 @@
       "path": "AVHRR\\04Bento"
     },
     {
+      "name": "05Haitang",
+      "category": "AVHRR",
+      "path": "AVHRR\\05Haitang"
+    },
+    {
+      "name": "05Katrina",
+      "category": "AVHRR",
+      "path": "AVHRR\\05Katrina"
+    },
+    {
       "name": "05Nabi",
       "category": "AVHRR",
       "path": "AVHRR\\05Nabi"
@@ -37,6 +47,11 @@
       "path": "AVHRR\\06Cimaron"
     },
     {
+      "name": "07Felix",
+      "category": "AVHRR",
+      "path": "AVHRR\\07Felix"
+    },
+    {
       "name": "09Melor",
       "category": "AVHRR",
       "path": "AVHRR\\09Melor"
@@ -50,6 +65,11 @@
       "name": "09Parma",
       "category": "AVHRR",
       "path": "AVHRR\\09Parma"
+    },
+    {
+      "name": "10Celia",
+      "category": "AVHRR",
+      "path": "AVHRR\\10Celia"
     },
     {
       "name": "14Vongfong",
@@ -332,6 +352,11 @@
       "path": "MODIS\\23Mawar"
     },
     {
+      "name": "24Chido",
+      "category": "MODIS",
+      "path": "MODIS\\24Chido"
+    },
+    {
       "name": "24Kristy",
       "category": "MODIS",
       "path": "MODIS\\24Kristy"
@@ -340,11 +365,6 @@
       "name": "24Milton",
       "category": "MODIS",
       "path": "MODIS\\24Milton"
-    },
-    {
-      "name": "25Chido",
-      "category": "MODIS",
-      "path": "MODIS\\25Chido"
     },
     {
       "name": "25Errol",
