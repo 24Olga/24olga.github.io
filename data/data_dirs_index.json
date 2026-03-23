@@ -1,5 +1,5 @@
 {
-  "total": 117,
+  "total": 122,
   "items": [
     {
       "name": "00Bilis",
@@ -70,6 +70,31 @@
       "name": "10Celia",
       "category": "AVHRR",
       "path": "AVHRR\\10Celia"
+    },
+    {
+      "name": "10Earl",
+      "category": "AVHRR",
+      "path": "AVHRR\\10Earl"
+    },
+    {
+      "name": "12Jelawat",
+      "category": "AVHRR",
+      "path": "AVHRR\\12Jelawat"
+    },
+    {
+      "name": "13Francisco",
+      "category": "AVHRR",
+      "path": "AVHRR\\13Francisco"
+    },
+    {
+      "name": "13Lekima",
+      "category": "AVHRR",
+      "path": "AVHRR\\13Lekima"
+    },
+    {
+      "name": "14Hagupit",
+      "category": "AVHRR",
+      "path": "AVHRR\\14Hagupit"
     },
     {
       "name": "14Vongfong",
