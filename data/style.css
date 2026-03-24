@@ -87,7 +87,7 @@ p {
 
 .content {
     padding: 100px 20%;
-    color: #7e7e7e;
+    color: #4e4e4e;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
@@ -208,6 +208,20 @@ p {
 
 .confirm-btn:hover {
     background: #2980b9;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #3498db;
+    color: white !important;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+#example {
+    margin-bottom: 1rem ;
 }
 
 @keyframes fadeIn {

@@ -1,5 +1,5 @@
 {
-  "total": 122,
+  "total": 129,
   "items": [
     {
       "name": "00Bilis",
@@ -102,9 +102,44 @@
       "path": "AVHRR\\14Vongfong"
     },
     {
+      "name": "15Noul",
+      "category": "AVHRR",
+      "path": "AVHRR\\15Noul"
+    },
+    {
       "name": "15Patricia",
       "category": "AVHRR",
       "path": "AVHRR\\15Patricia"
+    },
+    {
+      "name": "15Soudelor",
+      "category": "AVHRR",
+      "path": "AVHRR\\15Soudelor"
+    },
+    {
+      "name": "16Fantala",
+      "category": "AVHRR",
+      "path": "AVHRR\\16Fantala"
+    },
+    {
+      "name": "21Surigae",
+      "category": "AVHRR",
+      "path": "AVHRR\\21Surigae"
+    },
+    {
+      "name": "22Batsirai",
+      "category": "AVHRR",
+      "path": "AVHRR\\22Batsirai"
+    },
+    {
+      "name": "23Bolaven",
+      "category": "AVHRR",
+      "path": "AVHRR\\23Bolaven"
+    },
+    {
+      "name": "23Koinu",
+      "category": "AVHRR",
+      "path": "AVHRR\\23Koinu"
     },
     {
       "name": "24Gilma",
