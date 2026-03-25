@@ -1,5 +1,5 @@
 {
-  "total": 129,
+  "total": 135,
   "items": [
     {
       "name": "00Bilis",
@@ -142,6 +142,16 @@
       "path": "AVHRR\\23Koinu"
     },
     {
+      "name": "24Ampil",
+      "category": "AVHRR",
+      "path": "AVHRR\\24Ampil"
+    },
+    {
+      "name": "24Gaemi",
+      "category": "AVHRR",
+      "path": "AVHRR\\24Gaemi"
+    },
+    {
       "name": "24Gilma",
       "category": "AVHRR",
       "path": "AVHRR\\24Gilma"
@@ -162,9 +172,19 @@
       "path": "AVHRR\\24Krathon"
     },
     {
+      "name": "24Kristy",
+      "category": "AVHRR",
+      "path": "AVHRR\\24Kristy"
+    },
+    {
       "name": "24Yagi",
       "category": "AVHRR",
       "path": "AVHRR\\24Yagi"
+    },
+    {
+      "name": "25Melissa",
+      "category": "AVHRR",
+      "path": "AVHRR\\25Melissa"
     },
     {
       "name": "25Neoguri",
@@ -175,6 +195,11 @@
       "name": "25Ragasa",
       "category": "AVHRR",
       "path": "AVHRR\\25Ragasa"
+    },
+    {
+      "name": "26Gezani",
+      "category": "AVHRR",
+      "path": "AVHRR\\26Gezani"
     },
     {
       "name": "80Dean",
@@ -645,6 +670,11 @@
       "name": "25Ragasa",
       "category": "VIIRS",
       "path": "VIIRS\\25Ragasa"
+    },
+    {
+      "name": "26Dudzai",
+      "category": "VIIRS",
+      "path": "VIIRS\\26Dudzai"
     }
   ]
 }
