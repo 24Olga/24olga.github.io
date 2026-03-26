@@ -3,7 +3,7 @@ function populateDateSelect(year, month) {
     dateSelect.innerHTML = '';
     
     const daysInMonth = new Date(year, month + 1, 0).getDate();
-    for (let day = 1; day <= 29; day++) {
+    for (let day = 1; day <= 31; day++) {
         const option = new Option(
             `${String(day).padStart(2, '0')}日`,
             String(day).padStart(2, '0')
@@ -11,8 +11,8 @@ function populateDateSelect(year, month) {
         dateSelect.add(option);
     }
 
-    // const summaryOption = new Option('本月总结', 'summary');
-    // dateSelect.add(summaryOption);
+    const summaryOption = new Option('月度总结', 'summary');
+    dateSelect.add(summaryOption);
 }
 
 function submitForm() {
