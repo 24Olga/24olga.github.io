@@ -1,5 +1,5 @@
 {
-  "total": 135,
+  "total": 139,
   "items": [
     {
       "name": "00Bilis",
@@ -167,6 +167,11 @@
       "path": "AVHRR\\24Kirk"
     },
     {
+      "name": "24Kong-rey",
+      "category": "AVHRR",
+      "path": "AVHRR\\24Kong-rey"
+    },
+    {
       "name": "24Krathon",
       "category": "AVHRR",
       "path": "AVHRR\\24Krathon"
@@ -200,6 +205,16 @@
       "name": "26Gezani",
       "category": "AVHRR",
       "path": "AVHRR\\26Gezani"
+    },
+    {
+      "name": "79Viola-Claudette",
+      "category": "AVHRR",
+      "path": "AVHRR\\79Viola-Claudette"
+    },
+    {
+      "name": "80Alice-Adelaide",
+      "category": "AVHRR",
+      "path": "AVHRR\\80Alice-Adelaide"
     },
     {
       "name": "80Dean",
@@ -320,6 +335,11 @@
       "name": "23Mawar",
       "category": "HIMAWARI",
       "path": "HIMAWARI\\TARGET-AREA\\23Mawar"
+    },
+    {
+      "name": "24Man-yi",
+      "category": "HIMAWARI",
+      "path": "HIMAWARI\\FLDK\\24Man-yi"
     },
     {
       "name": "25Halong",
