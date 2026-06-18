@@ -1,5 +1,5 @@
 {
-  "total": 139,
+  "total": 146,
   "items": [
     {
       "name": "00Bilis",
@@ -15,6 +15,11 @@
       "name": "01Juliette",
       "category": "AVHRR",
       "path": "AVHRR\\01Juliette"
+    },
+    {
+      "name": "02Halong",
+      "category": "AVHRR",
+      "path": "AVHRR\\02Halong"
     },
     {
       "name": "04Bento",
@@ -207,6 +212,11 @@
       "path": "AVHRR\\26Gezani"
     },
     {
+      "name": "26Sinlaku",
+      "category": "AVHRR",
+      "path": "AVHRR\\26Sinlaku"
+    },
+    {
       "name": "79Viola-Claudette",
       "category": "AVHRR",
       "path": "AVHRR\\79Viola-Claudette"
@@ -240,6 +250,31 @@
       "name": "91Orchid",
       "category": "AVHRR",
       "path": "AVHRR\\91Orchid"
+    },
+    {
+      "name": "91Seth",
+      "category": "AVHRR",
+      "path": "AVHRR\\91Seth"
+    },
+    {
+      "name": "91Walt",
+      "category": "AVHRR",
+      "path": "AVHRR\\91Walt"
+    },
+    {
+      "name": "93Ed",
+      "category": "AVHRR",
+      "path": "AVHRR\\93Ed"
+    },
+    {
+      "name": "97Ginger",
+      "category": "AVHRR",
+      "path": "AVHRR\\97Ginger"
+    },
+    {
+      "name": "97Winnie",
+      "category": "AVHRR",
+      "path": "AVHRR\\97Winnie"
     },
     {
       "name": "25Ragasa",
