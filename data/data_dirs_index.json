@@ -1,5 +1,5 @@
 {
-  "total": 146,
+  "total": 156,
   "items": [
     {
       "name": "00Bilis",
@@ -37,6 +37,11 @@
       "path": "AVHRR\\05Katrina"
     },
     {
+      "name": "05Longwang",
+      "category": "AVHRR",
+      "path": "AVHRR\\05Longwang"
+    },
+    {
       "name": "05Nabi",
       "category": "AVHRR",
       "path": "AVHRR\\05Nabi"
@@ -55,6 +60,11 @@
       "name": "07Felix",
       "category": "AVHRR",
       "path": "AVHRR\\07Felix"
+    },
+    {
+      "name": "07Indlala",
+      "category": "AVHRR",
+      "path": "AVHRR\\07Indlala"
     },
     {
       "name": "09Melor",
@@ -237,9 +247,19 @@
       "path": "AVHRR\\80Felix"
     },
     {
+      "name": "80Kim",
+      "category": "AVHRR",
+      "path": "AVHRR\\80Kim"
+    },
+    {
       "name": "81Neil",
       "category": "AVHRR",
       "path": "AVHRR\\81Neil"
+    },
+    {
+      "name": "88Nelson",
+      "category": "AVHRR",
+      "path": "AVHRR\\88Nelson"
     },
     {
       "name": "91Claudette",
@@ -397,9 +417,19 @@
       "path": "MODIS\\03Kujira"
     },
     {
+      "name": "03Maemi",
+      "category": "MODIS",
+      "path": "MODIS\\03Maemi"
+    },
+    {
       "name": "04Dianmu",
       "category": "MODIS",
       "path": "MODIS\\04Dianmu"
+    },
+    {
+      "name": "04Gafilo",
+      "category": "MODIS",
+      "path": "MODIS\\04Gafilo"
     },
     {
       "name": "05Katrina",
@@ -427,9 +457,29 @@
       "path": "MODIS\\05Wilma"
     },
     {
+      "name": "06Cimaron",
+      "category": "MODIS",
+      "path": "MODIS\\06Cimaron"
+    },
+    {
       "name": "06Yagi",
       "category": "MODIS",
       "path": "MODIS\\06Yagi"
+    },
+    {
+      "name": "07Dean",
+      "category": "MODIS",
+      "path": "MODIS\\07Dean"
+    },
+    {
+      "name": "07Sepat",
+      "category": "MODIS",
+      "path": "MODIS\\07Sepat"
+    },
+    {
+      "name": "09Nida",
+      "category": "MODIS",
+      "path": "MODIS\\09Nida"
     },
     {
       "name": "09Rick",

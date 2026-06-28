@@ -3,7 +3,7 @@ function populateDateSelect(year, month) {
     dateSelect.innerHTML = '';
     
     const daysInMonth = new Date(year, month + 1, 0).getDate();
-    for (let day = 1; day <= 4; day++) {
+    for (let day = 1; day <= 6; day++) {
         const option = new Option(
             `${String(day).padStart(2, '0')}日`,
             String(day).padStart(2, '0')
