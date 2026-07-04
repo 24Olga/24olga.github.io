@@ -1,5 +1,5 @@
 {
-  "total": 156,
+  "total": 160,
   "items": [
     {
       "name": "00Bilis",
@@ -215,6 +215,11 @@
       "name": "25Ragasa",
       "category": "AVHRR",
       "path": "AVHRR\\25Ragasa"
+    },
+    {
+      "name": "26Bavi",
+      "category": "AVHRR",
+      "path": "AVHRR\\26Bavi"
     },
     {
       "name": "26Gezani",
@@ -582,6 +587,11 @@
       "path": "MODIS\\25Ragasa"
     },
     {
+      "name": "26Bavi",
+      "category": "MODIS",
+      "path": "MODIS\\26Bavi"
+    },
+    {
       "name": "19Kyarr",
       "category": "MSG-IODC",
       "path": "MSG-IODC\\19Kyarr"
@@ -717,6 +727,11 @@
       "path": "SLSTR\\25Ragasa"
     },
     {
+      "name": "26Bavi",
+      "category": "SLSTR",
+      "path": "SLSTR\\26Bavi"
+    },
+    {
       "name": "12Bopha",
       "category": "VIIRS",
       "path": "VIIRS\\12Bopha"
@@ -775,6 +790,11 @@
       "name": "25Ragasa",
       "category": "VIIRS",
       "path": "VIIRS\\25Ragasa"
+    },
+    {
+      "name": "26Bavi",
+      "category": "VIIRS",
+      "path": "VIIRS\\26Bavi"
     },
     {
       "name": "26Dudzai",
