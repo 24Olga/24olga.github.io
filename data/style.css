@@ -218,6 +218,7 @@ p {
     border-radius: 5px;
     text-decoration: none;
     transition: background 0.3s;
+    margin: 0.35rem auto;
 }
 
 #example {
