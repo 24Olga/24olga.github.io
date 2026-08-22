@@ -157,15 +157,15 @@
                 }
             }
 
-            #currentTime{
-              position: fixed;
-              right: 20px;
-              bottom: 20px;
-              color: #FFFFFF;
-              font-family: Arial, Sans-Serif;
-              padding: 5px 10px;
-              border-radius: 5px;
-              box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            .button {
+                display: inline-block;
+                padding: 10px 25px;
+                background: #3498db;
+                color: white !important;
+                border-radius: 5px;
+                text-decoration: none;
+                transition: background 0.3s;
+                margin: 0.35rem auto;
             }
         </style>
     </head>
@@ -187,6 +187,7 @@
         <div class="content error container">
             <h1>404 NOT FOUND</h1>
             <p class="long">没有找到您想要访问的页面呢😭<br>请确认网址输入是否正确🙂</p>
+            <a href="http://8.153.36.100/error-report/" class="button">反馈该错误</a>
         </div>
         <script>
             window.addEventListener('scroll', function() {

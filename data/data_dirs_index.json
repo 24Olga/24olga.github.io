@@ -1,5 +1,5 @@
 {
-  "total": 166,
+  "total": 173,
   "items": [
     {
       "name": "00Bilis",
@@ -222,6 +222,11 @@
       "path": "AVHRR\\26Bavi"
     },
     {
+      "name": "26Dolphin",
+      "category": "AVHRR",
+      "path": "AVHRR\\26Dolphin"
+    },
+    {
       "name": "26Genevieve",
       "category": "AVHRR",
       "path": "AVHRR\\26Genevieve"
@@ -230,6 +235,11 @@
       "name": "26Gezani",
       "category": "AVHRR",
       "path": "AVHRR\\26Gezani"
+    },
+    {
+      "name": "26Lala",
+      "category": "AVHRR",
+      "path": "AVHRR\\26Lala"
     },
     {
       "name": "26Sinlaku",
@@ -350,11 +360,6 @@
       "name": "25Chantal",
       "category": "GOES",
       "path": "GOES\\GOES-19\\MESOSCALE\\25Chantal"
-    },
-    {
-      "name": "25Dexter",
-      "category": "GOES",
-      "path": "GOES\\GOES-19\\FLDK\\25Dexter"
     },
     {
       "name": "25Erin",
@@ -597,6 +602,11 @@
       "path": "MODIS\\26Bavi"
     },
     {
+      "name": "26Dolphin",
+      "category": "MODIS",
+      "path": "MODIS\\26Dolphin"
+    },
+    {
       "name": "26Genevieve",
       "category": "MODIS",
       "path": "MODIS\\26Genevieve"
@@ -677,6 +687,11 @@
       "path": "SGLI\\26Bavi"
     },
     {
+      "name": "26Dolphin",
+      "category": "SGLI",
+      "path": "SGLI\\26Dolphin"
+    },
+    {
       "name": "26Genevieve",
       "category": "SGLI",
       "path": "SGLI\\26Genevieve"
@@ -752,9 +767,19 @@
       "path": "SLSTR\\26Bavi"
     },
     {
+      "name": "26Dolphin",
+      "category": "SLSTR",
+      "path": "SLSTR\\26Dolphin"
+    },
+    {
       "name": "26Genevieve",
       "category": "SLSTR",
       "path": "SLSTR\\26Genevieve"
+    },
+    {
+      "name": "26Lala",
+      "category": "SLSTR",
+      "path": "SLSTR\\26Lala"
     },
     {
       "name": "12Bopha",
@@ -822,6 +847,11 @@
       "path": "VIIRS\\26Bavi"
     },
     {
+      "name": "26Dolphin",
+      "category": "VIIRS",
+      "path": "VIIRS\\26Dolphin"
+    },
+    {
       "name": "26Dudzai",
       "category": "VIIRS",
       "path": "VIIRS\\26Dudzai"
@@ -830,6 +860,11 @@
       "name": "26Genevieve",
       "category": "VIIRS",
       "path": "VIIRS\\26Genevieve"
+    },
+    {
+      "name": "26Lala",
+      "category": "VIIRS",
+      "path": "VIIRS\\26Lala"
     }
   ]
 }
