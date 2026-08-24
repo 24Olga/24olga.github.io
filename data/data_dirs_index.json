@@ -1,5 +1,5 @@
 {
-  "total": 173,
+  "total": 176,
   "items": [
     {
       "name": "00Bilis",
@@ -425,6 +425,16 @@
       "name": "25Ragasa",
       "category": "HIMAWARI",
       "path": "HIMAWARI\\TARGET-AREA\\25Ragasa"
+    },
+    {
+      "name": "02Dina",
+      "category": "MODIS",
+      "path": "MODIS\\02Dina"
+    },
+    {
+      "name": "02Hernan",
+      "category": "MODIS",
+      "path": "MODIS\\02Hernan"
     },
     {
       "name": "03Kujira",
@@ -865,6 +875,11 @@
       "name": "26Lala",
       "category": "VIIRS",
       "path": "VIIRS\\26Lala"
+    },
+    {
+      "name": "02Dina",
+      "category": "VIRS",
+      "path": "VIRS\\02Dina"
     }
   ]
 }
