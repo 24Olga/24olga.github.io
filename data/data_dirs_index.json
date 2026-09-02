@@ -1,5 +1,5 @@
 {
-  "total": 176,
+  "total": 177,
   "items": [
     {
       "name": "00Bilis",
@@ -785,6 +785,11 @@
       "name": "26Genevieve",
       "category": "SLSTR",
       "path": "SLSTR\\26Genevieve"
+    },
+    {
+      "name": "26Karina",
+      "category": "SLSTR",
+      "path": "SLSTR\\26Karina"
     },
     {
       "name": "26Lala",
