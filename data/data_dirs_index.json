@@ -1,5 +1,5 @@
 {
-  "total": 177,
+  "total": 183,
   "items": [
     {
       "name": "00Bilis",
@@ -242,6 +242,11 @@
       "path": "AVHRR\\26Lala"
     },
     {
+      "name": "26Lowell",
+      "category": "AVHRR",
+      "path": "AVHRR\\26Lowell"
+    },
+    {
       "name": "26Sinlaku",
       "category": "AVHRR",
       "path": "AVHRR\\26Sinlaku"
@@ -370,6 +375,11 @@
       "name": "25Humberto",
       "category": "GOES",
       "path": "GOES\\GOES-19\\FLDK\\25Humberto"
+    },
+    {
+      "name": "26Lowell",
+      "category": "GOES",
+      "path": "GOES\\GOES-18\\FLDK\\26Lowell"
     },
     {
       "name": "15Soudelor",
@@ -622,6 +632,11 @@
       "path": "MODIS\\26Genevieve"
     },
     {
+      "name": "26Lowell",
+      "category": "MODIS",
+      "path": "MODIS\\26Lowell"
+    },
+    {
       "name": "19Kyarr",
       "category": "MSG-IODC",
       "path": "MSG-IODC\\19Kyarr"
@@ -705,6 +720,11 @@
       "name": "26Genevieve",
       "category": "SGLI",
       "path": "SGLI\\26Genevieve"
+    },
+    {
+      "name": "26Lowell",
+      "category": "SGLI",
+      "path": "SGLI\\26Lowell"
     },
     {
       "name": "18Hector",
@@ -797,6 +817,11 @@
       "path": "SLSTR\\26Lala"
     },
     {
+      "name": "26Lowell",
+      "category": "SLSTR",
+      "path": "SLSTR\\26Lowell"
+    },
+    {
       "name": "12Bopha",
       "category": "VIIRS",
       "path": "VIIRS\\12Bopha"
@@ -880,6 +905,11 @@
       "name": "26Lala",
       "category": "VIIRS",
       "path": "VIIRS\\26Lala"
+    },
+    {
+      "name": "26Lowell",
+      "category": "VIIRS",
+      "path": "VIIRS\\26Lowell"
     },
     {
       "name": "02Dina",
