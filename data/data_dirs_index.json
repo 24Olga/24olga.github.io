@@ -1,5 +1,5 @@
 {
-  "total": 231,
+  "total": 242,
   "items": [
     {
       "name": "00Bilis",
@@ -20,6 +20,11 @@
       "name": "02Halong",
       "category": "AVHRR",
       "path": "AVHRR\\02Halong"
+    },
+    {
+      "name": "02Zoe",
+      "category": "AVHRR",
+      "path": "AVHRR\\02Zoe"
     },
     {
       "name": "04Bento",
@@ -130,6 +135,11 @@
       "name": "14Hagupit",
       "category": "AVHRR",
       "path": "AVHRR\\14Hagupit"
+    },
+    {
+      "name": "14Rammasun",
+      "category": "AVHRR",
+      "path": "AVHRR\\14Rammasun"
     },
     {
       "name": "14Vongfong",
@@ -327,6 +337,11 @@
       "path": "AVHRR\\80Kim"
     },
     {
+      "name": "80Wynne",
+      "category": "AVHRR",
+      "path": "AVHRR\\80Wynne"
+    },
+    {
       "name": "81Neil",
       "category": "AVHRR",
       "path": "AVHRR\\81Neil"
@@ -367,9 +382,19 @@
       "path": "AVHRR\\93Ed"
     },
     {
+      "name": "96Hortense",
+      "category": "AVHRR",
+      "path": "AVHRR\\96Hortense"
+    },
+    {
       "name": "97Ginger",
       "category": "AVHRR",
       "path": "AVHRR\\97Ginger"
+    },
+    {
+      "name": "97Ivan",
+      "category": "AVHRR",
+      "path": "AVHRR\\97Ivan"
     },
     {
       "name": "97Winnie",
@@ -527,6 +552,11 @@
       "path": "MODIS\\03Maemi"
     },
     {
+      "name": "04Chaba",
+      "category": "MODIS",
+      "path": "MODIS\\04Chaba"
+    },
+    {
       "name": "04Dianmu",
       "category": "MODIS",
       "path": "MODIS\\04Dianmu"
@@ -627,6 +657,11 @@
       "path": "MODIS\\14Marie"
     },
     {
+      "name": "14Rammasun",
+      "category": "MODIS",
+      "path": "MODIS\\14Rammasun"
+    },
+    {
       "name": "15Soudelor",
       "category": "MODIS",
       "path": "MODIS\\15Soudelor"
@@ -665,6 +700,11 @@
       "name": "24Chido",
       "category": "MODIS",
       "path": "MODIS\\24Chido"
+    },
+    {
+      "name": "24Gaemi",
+      "category": "MODIS",
+      "path": "MODIS\\24Gaemi"
     },
     {
       "name": "24Kristy",
@@ -872,6 +912,11 @@
       "path": "SLSTR\\21Mindulle"
     },
     {
+      "name": "24Gaemi",
+      "category": "SLSTR",
+      "path": "SLSTR\\24Gaemi"
+    },
+    {
       "name": "24Kirk",
       "category": "SLSTR",
       "path": "SLSTR\\24Kirk"
@@ -992,6 +1037,11 @@
       "path": "VIIRS\\12Bopha"
     },
     {
+      "name": "14Rammasun",
+      "category": "VIIRS",
+      "path": "VIIRS\\14Rammasun"
+    },
+    {
       "name": "15Soudelor",
       "category": "VIIRS",
       "path": "VIIRS\\15Soudelor"
@@ -1010,6 +1060,11 @@
       "name": "23Herman",
       "category": "VIIRS",
       "path": "VIIRS\\23Herman"
+    },
+    {
+      "name": "24Gaemi",
+      "category": "VIIRS",
+      "path": "VIIRS\\24Gaemi"
     },
     {
       "name": "24Kristy",
