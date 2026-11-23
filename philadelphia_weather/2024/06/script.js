@@ -11,8 +11,8 @@ function populateDateSelect(year, month) {
         dateSelect.add(option);
     }
 
-    // const summaryOption = new Option('月度总结', 'summary');
-    // dateSelect.add(summaryOption);
+    const summaryOption = new Option('月度总结', 'summary');
+    dateSelect.add(summaryOption);
 }
 
 function submitForm() {

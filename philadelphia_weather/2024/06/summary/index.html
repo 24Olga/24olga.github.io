@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <title>2024年6月费城天气总结</title>
+        <link rel="icon" href="../../../../H8_FRGB_TRY.png" type="image/png" sizes="32x32">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!-- 导航栏 -->
+        <nav class="navbar">
+            <a href="../../../../" class="logo">
+                <img src="../../../../logo.png" alt="网站Logo">
+            </a>
+            <a href="../" class="back-button">
+                返回
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../../../data" target="_self">云图文件</a></li>
+                <li><a href="../../../../menu" target="_self">其他文件</a></li>
+                <li><a href="../../../../updates" target="_self">文件更新</a></li>
+                <li><a href="../../../../friend_link" target="_self">友情链接</a></li>
+                <li><a href="../../../../history" target="_self">本站历史</a></li>
+                <li><a href="../../../../en" target="_self">English</a></li>
+            </ul>
+        </nav>
+
+        <div class="dashboard">
+            <div class="table-header-meta">
+                <h2>2024年6月费城天气总结</h2>
+            </div>
+            <div style="overflow-x: auto;">
+                <table class="data-table" id="mainTable">
+                    <thead>
+                        <tr>
+                            <th class="date-col">日期</th>
+                            <th class="weather-col">天气状况</th>
+                            <th class="num-col">最高气温 (℃)</th>
+                            <th class="num-col">最低气温 (℃)</th>
+                            <th class="num-col">平均气温 (℃)</th>
+                            <th class="num-col">常年最高 (℃)</th>
+                            <th class="num-col">常年最低 (℃)</th>
+                            <th class="num-col">常年平均 (℃)</th>
+                            <th class="num-col">降水量 (mm)</th>
+                            <th class="num-col">预报评分</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="date-col">6/1</td>
+                            <td class="weather-col">晴，夜间转多云</td>
+                            <td class="num-col temp-high-cell" data-temp="28.9">28.9</td>
+                            <td class="num-col temp-low-cell" data-temp="12.8">12.8</td>
+                            <td class="num-col">22.2</td>
+                            <td class="num-col">26.1</td>
+                            <td class="num-col">15.0</td>
+                            <td class="num-col">20.6</td>
+                            <td class="num-col">0</td>
+                            <td class="num-col">90</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/2</td>
+                            <td class="weather-col">多云到阴，傍晚局部地区有短时阵雨</td>
+                            <td class="num-col temp-high-cell" data-temp="30">30</td>
+                            <td class="num-col temp-low-cell" data-temp="16.7">16.7</td>
+                            <td class="num-col">23.3</td>
+                            <td class="num-col">26.1</td>
+                            <td class="num-col">15.6</td>
+                            <td class="num-col">20.8</td>
+                            <td class="num-col">T</td>
+                            <td class="num-col">63</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/3</td>
+                            <td class="weather-col">多云到晴，下午到傍晚局部地区有阵雨或雷雨</td>
+                            <td class="num-col temp-high-cell" data-temp="31.1">31.1</td>
+                            <td class="num-col temp-low-cell" data-temp="22.2">22.2</td>
+                            <td class="num-col">25.2</td>
+                            <td class="num-col">26.1</td>
+                            <td class="num-col">15.6</td>
+                            <td class="num-col">20.8</td>
+                            <td class="num-col">4.8</td>
+                            <td class="num-col">65</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/4</td>
+                            <td class="weather-col">多云，早晨有薄雾</td>
+                            <td class="num-col temp-high-cell" data-temp="31.7">31.7</td>
+                            <td class="num-col temp-low-cell" data-temp="19.4">19.4</td>
+                            <td class="num-col">24.9</td>
+                            <td class="num-col">26.7</td>
+                            <td class="num-col">15.6</td>
+                            <td class="num-col">21.1</td>
+                            <td class="num-col">0</td>
+                            <td class="num-col">70</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/5</td>
+                            <td class="weather-col">多云到阴，傍晚转阴有阵雨或雷雨</td>
+                            <td class="num-col temp-high-cell" data-temp="29.4">29.4</td>
+                            <td class="num-col temp-low-cell" data-temp="18.9">18.9</td>
+                            <td class="num-col">23.4</td>
+                            <td class="num-col">26.7</td>
+                            <td class="num-col">16.1</td>
+                            <td class="num-col">21.4</td>
+                            <td class="num-col">38.4</td>
+                            <td class="num-col">65</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/6</td>
+                            <td class="weather-col">凌晨阴有阵雨或雷雨，早晨有薄雾，白天转阴到多云，下午转多云到晴</td>
+                            <td class="num-col temp-high-cell" data-temp="30.6">30.6</td>
+                            <td class="num-col temp-low-cell" data-temp="22.2">22.2</td>
+                            <td class="num-col">26</td>
+                            <td class="num-col">26.7</td>
+                            <td class="num-col">16.1</td>
+                            <td class="num-col">21.4</td>
+                            <td class="num-col">10.7</td>
+                            <td class="num-col">95</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/7</td>
+                            <td class="weather-col">多云</td>
+                            <td class="num-col temp-high-cell" data-temp="30.6">30.6</td>
+                            <td class="num-col temp-low-cell" data-temp="21.1">21.1</td>
+                            <td class="num-col">25.9</td>
+                            <td class="num-col">27.2</td>
+                            <td class="num-col">16.1</td>
+                            <td class="num-col">21.7</td>
+                            <td class="num-col">0</td>
+                            <td class="num-col">N/A</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/8</td>
+                            <td class="weather-col">晴到少云</td>
+                            <td class="num-col temp-high-cell" data-temp="27.8">27.8</td>
+                            <td class="num-col temp-low-cell" data-temp="17.8">17.8</td>
+                            <td class="num-col">23.3</td>
+                            <td class="num-col">27.2</td>
+                            <td class="num-col">16.7</td>
+                            <td class="num-col">21.9</td>
+                            <td class="num-col">0</td>
+                            <td class="num-col">N/A</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/9</td>
+                            <td class="weather-col">阴到多云局部有短时阵雨，下午转多云到晴</td>
+                            <td class="num-col temp-high-cell" data-temp="27.8">27.8</td>
+                            <td class="num-col temp-low-cell" data-temp="18.9">18.9</td>
+                            <td class="num-col">23.4</td>
+                            <td class="num-col">27.2</td>
+                            <td class="num-col">16.7</td>
+                            <td class="num-col">21.9</td>
+                            <td class="num-col">0</td>
+                            <td class="num-col">N/A</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/10</td>
+                            <td class="weather-col">多云到晴</td>
+                            <td class="num-col temp-high-cell" data-temp="25">25</td>
+                            <td class="num-col temp-low-cell" data-temp="17.8">17.8</td>
+                            <td class="num-col">21.8</td>
+                            <td class="num-col">27.8</td>
+                            <td class="num-col">16.7</td>
+                            <td class="num-col">22.2</td>
+                            <td class="num-col">0</td>
+                            <td class="num-col">87</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/11</td>
+                            <td class="weather-col">多云到阴</td>
+                            <td class="num-col temp-high-cell" data-temp="23.9">23.9</td>
+                            <td class="num-col temp-low-cell" data-temp="16.7">16.7</td>
+                            <td class="num-col">20.5</td>
+                            <td class="num-col">27.8</td>
+                            <td class="num-col">17.2</td>
+                            <td class="num-col">22.5</td>
+                            <td class="num-col">0</td>
+                            <td class="num-col">85</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/12</td>
+                            <td class="weather-col">晴到多云</td>
+                            <td class="num-col temp-high-cell" data-temp="26.7">26.7</td>
+                            <td class="num-col temp-low-cell" data-temp="16.7">16.7</td>
+                            <td class="num-col">21.9</td>
+                            <td class="num-col">27.8</td>
+                            <td class="num-col">17.2</td>
+                            <td class="num-col">22.5</td>
+                            <td class="num-col">0</td>
+                            <td class="num-col">90</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/13</td>
+                            <td class="weather-col">晴~多云</td>
+                            <td class="num-col temp-high-cell" data-temp="30.6">30.6</td>
+                            <td class="num-col temp-low-cell" data-temp="17.8">17.8</td>
+                            <td class="num-col">24.2</td>
+                            <td class="num-col">28.3</td>
+                            <td class="num-col">17.2</td>
+                            <td class="num-col">22.8</td>
+                            <td class="num-col">0</td>
+                            <td class="num-col">94</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/14</td>
+                            <td class="weather-col">晴，午后到傍晚转多云，北部地区有阵雨或雷雨</td>
+                            <td class="num-col temp-high-cell" data-temp="32.2">32.2</td>
+                            <td class="num-col temp-low-cell" data-temp="20.6">20.6</td>
+                            <td class="num-col">24.9</td>
+                            <td class="num-col">28.3</td>
+                            <td class="num-col">17.8</td>
+                            <td class="num-col">23.1</td>
+                            <td class="num-col">0.5</td>
+                            <td class="num-col">72</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/15</td>
+                            <td class="weather-col">晴~少云</td>
+                            <td class="num-col temp-high-cell" data-temp="28.9">28.9</td>
+                            <td class="num-col temp-low-cell" data-temp="18.3">18.3</td>
+                            <td class="num-col">23.7</td>
+                            <td class="num-col">28.3</td>
+                            <td class="num-col">17.8</td>
+                            <td class="num-col">23.1</td>
+                            <td class="num-col">T</td>
+                            <td class="num-col">98</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/16</td>
+                            <td class="weather-col">晴到多云</td>
+                            <td class="num-col temp-high-cell" data-temp="30">30</td>
+                            <td class="num-col temp-low-cell" data-temp="17.2">17.2</td>
+                            <td class="num-col">23.4</td>
+                            <td class="num-col">28.9</td>
+                            <td class="num-col">17.8</td>
+                            <td class="num-col">23.3</td>
+                            <td class="num-col">0</td>
+                            <td class="num-col">88</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/17</td>
+                            <td class="weather-col">晴~少云</td>
+                            <td class="num-col temp-high-cell" data-temp="31.7">31.7</td>
+                            <td class="num-col temp-low-cell" data-temp="18.9">18.9</td>
+                            <td class="num-col">25.2</td>
+                            <td class="num-col">28.9</td>
+                            <td class="num-col">18.3</td>
+                            <td class="num-col">23.6</td>
+                            <td class="num-col">0</td>
+                            <td class="num-col">91</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/18</td>
+                            <td class="weather-col">晴~多云</td>
+                            <td class="num-col temp-high-cell" data-temp="32.8">32.8</td>
+                            <td class="num-col temp-low-cell" data-temp="22.2">22.2</td>
+                            <td class="num-col">26.6</td>
+                            <td class="num-col">28.9</td>
+                            <td class="num-col">18.3</td>
+                            <td class="num-col">23.6</td>
+                            <td class="num-col">0</td>
+                            <td class="num-col">85</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/19</td>
+                            <td class="weather-col">晴到少云</td>
+                            <td class="num-col temp-high-cell" data-temp="32.2">32.2</td>
+                            <td class="num-col temp-low-cell" data-temp="21.7">21.7</td>
+                            <td class="num-col">26.3</td>
+                            <td class="num-col">28.9</td>
+                            <td class="num-col">18.3</td>
+                            <td class="num-col">23.6</td>
+                            <td class="num-col">0</td>
+                            <td class="num-col">N/A</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/20</td>
+                            <td class="weather-col">晴到多云</td>
+                            <td class="num-col temp-high-cell" data-temp="32.8">32.8</td>
+                            <td class="num-col temp-low-cell" data-temp="21.7">21.7</td>
+                            <td class="num-col">26.9</td>
+                            <td class="num-col">29.4</td>
+                            <td class="num-col">18.9</td>
+                            <td class="num-col">24.2</td>
+                            <td class="num-col">0</td>
+                            <td class="num-col">95</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/21</td>
+                            <td class="weather-col">晴~少云</td>
+                            <td class="num-col temp-high-cell" data-temp="34.4">34.4</td>
+                            <td class="num-col temp-low-cell" data-temp="22.8">22.8</td>
+                            <td class="num-col">28.1</td>
+                            <td class="num-col">29.4</td>
+                            <td class="num-col">18.9</td>
+                            <td class="num-col">24.2</td>
+                            <td class="num-col">0</td>
+                            <td class="num-col">91</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/22</td>
+                            <td class="weather-col">晴~多云，午后市区北部多云到阴局部地区有阵雨或雷雨</td>
+                            <td class="num-col temp-high-cell" data-temp="36.7">36.7</td>
+                            <td class="num-col temp-low-cell" data-temp="23.9">23.9</td>
+                            <td class="num-col">30.3</td>
+                            <td class="num-col">29.4</td>
+                            <td class="num-col">18.9</td>
+                            <td class="num-col">24.2</td>
+                            <td class="num-col">0</td>
+                            <td class="num-col">96</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/23</td>
+                            <td class="weather-col">多云到阴，傍晚转阴到多云有阵雨或雷雨</td>
+                            <td class="num-col temp-high-cell" data-temp="36.7">36.7</td>
+                            <td class="num-col temp-low-cell" data-temp="23.9">23.9</td>
+                            <td class="num-col">29.1</td>
+                            <td class="num-col">30.0</td>
+                            <td class="num-col">18.9</td>
+                            <td class="num-col">24.4</td>
+                            <td class="num-col">9.4</td>
+                            <td class="num-col">90</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/24</td>
+                            <td class="weather-col">多云到晴</td>
+                            <td class="num-col temp-high-cell" data-temp="29.4">29.4</td>
+                            <td class="num-col temp-low-cell" data-temp="23.3">23.3</td>
+                            <td class="num-col">26.7</td>
+                            <td class="num-col">30.0</td>
+                            <td class="num-col">19.4</td>
+                            <td class="num-col">24.7</td>
+                            <td class="num-col">0</td>
+                            <td class="num-col">N/A</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/25</td>
+                            <td class="weather-col">多云</td>
+                            <td class="num-col temp-high-cell" data-temp="31.7">31.7</td>
+                            <td class="num-col temp-low-cell" data-temp="20">20</td>
+                            <td class="num-col">27.4</td>
+                            <td class="num-col">30.0</td>
+                            <td class="num-col">19.4</td>
+                            <td class="num-col">24.7</td>
+                            <td class="num-col">0</td>
+                            <td class="num-col">N/A</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/26</td>
+                            <td class="weather-col">晴到多云，傍晚转阴到多云，夜间北部地区阴有阵雨或雷雨</td>
+                            <td class="num-col temp-high-cell" data-temp="35">35</td>
+                            <td class="num-col temp-low-cell" data-temp="23.9">23.9</td>
+                            <td class="num-col">29.1</td>
+                            <td class="num-col">30.0</td>
+                            <td class="num-col">19.4</td>
+                            <td class="num-col">24.7</td>
+                            <td class="num-col">0</td>
+                            <td class="num-col">96</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/27</td>
+                            <td class="weather-col">阴有阵雨或雷雨，上午转多云到晴</td>
+                            <td class="num-col temp-high-cell" data-temp="30.6">30.6</td>
+                            <td class="num-col temp-low-cell" data-temp="21.1">21.1</td>
+                            <td class="num-col">25.7</td>
+                            <td class="num-col">30.0</td>
+                            <td class="num-col">19.4</td>
+                            <td class="num-col">24.7</td>
+                            <td class="num-col">10.7</td>
+                            <td class="num-col">85</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/28</td>
+                            <td class="weather-col">晴，傍晚转多云</td>
+                            <td class="num-col temp-high-cell" data-temp="27.8">27.8</td>
+                            <td class="num-col temp-low-cell" data-temp="18.3">18.3</td>
+                            <td class="num-col">23</td>
+                            <td class="num-col">30.6</td>
+                            <td class="num-col">20.0</td>
+                            <td class="num-col">25.3</td>
+                            <td class="num-col">0</td>
+                            <td class="num-col">95</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/29</td>
+                            <td class="weather-col">多云，夜间转阴有阵雨或雷雨</td>
+                            <td class="num-col temp-high-cell" data-temp="31.1">31.1</td>
+                            <td class="num-col temp-low-cell" data-temp="18.9">18.9</td>
+                            <td class="num-col">25.3</td>
+                            <td class="num-col">30.6</td>
+                            <td class="num-col">20.0</td>
+                            <td class="num-col">25.3</td>
+                            <td class="num-col">2.3</td>
+                            <td class="num-col">95</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">6/30</td>
+                            <td class="weather-col">阴有时有阵雨或雷雨，中午转晴到多云，傍晚转阴有强雷雨</td>
+                            <td class="num-col temp-high-cell" data-temp="32.2">32.2</td>
+                            <td class="num-col temp-low-cell" data-temp="21.7">21.7</td>
+                            <td class="num-col">25.3</td>
+                            <td class="num-col">30.6</td>
+                            <td class="num-col">20.0</td>
+                            <td class="num-col">25.3</td>
+                            <td class="num-col">42.2</td>
+                            <td class="num-col">87</td>
+                        </tr>
+
+                        <tr>
+                            <td class="date-col">平均值/总和</td>
+                            <td class="weather-col">\</td>
+                            <td class="num-col temp-high-cell" data-temp="30.7">30.7</td>
+                            <td class="num-col temp-low-cell" data-temp="19.9">19.9</td>
+                            <td class="num-col">25.1</td>
+                            <td class="num-col">28.5</td>
+                            <td class="num-col">17.8</td>
+                            <td class="num-col">23.1</td>
+                            <td class="num-col">119</td>
+                            <td class="num-col">86</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="data-table" id="general-info">
+                    <thead>
+                        <tr>
+                            <th>极高最高温</th>
+                            <th>出现日期</th>
+                            <th>极低最低温</th>
+                            <th>出现日期</th>
+                            <th>极高最低温</th>
+                            <th>出现日期</th>
+                            <th>极低最高温</th>
+                            <th>出现日期</th>
+                            <th>平均高温</th>
+                            <th>平均低温</th>
+                            <th>平均气温</th>
+                            <th>气温距平</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>36.7℃</td>
+                            <td>2024/6/23 & 6/24</td>
+                            <td>12.8℃</td>
+                            <td>2024/6/1</td>
+                            <td>23.9℃</td>
+                            <td>2024/6/11</td>
+                            <td>23.9℃</td>
+                            <td>2024/6/22 & 6/23 & 6/26</td>
+                            <td>30.7℃</td>
+                            <td>19.9℃</td>
+                            <td>25.1℃</td>
+                            <td id="anomaly">+2.0℃</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="data-table" id="weather-condition">
+                    <thead>
+                        <tr>
+                            <th>天气情况</th>
+                            <th>天数（天）</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>晴/晴到少云/少云</td>
+                            <td>9.250</td>
+                        </tr>
+                        <tr>
+                            <td>多云/多云到晴/晴到多云</td>
+                            <td>13.550</td>
+                        </tr>
+                        <tr>
+                            <td>阴/阴到多云/多云到阴</td>
+                            <td>4.142</td>
+                        </tr>
+                        <tr>
+                            <td>雨/风/雨+风/雷雨/阵雨</td>
+                            <td>2.683</td>
+                        <tr>
+                            <td>雾</td>
+                            <td>0.375</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <img src="202406_03.png" class="weather-img">
+            <img src="202406_04.png" class="weather-img">
+            <img src="202406_05.png" class="weather-img">
+            <img src="202406_06.png" class="weather-img">
+            <img src="202406_09.png" class="weather-img">
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
